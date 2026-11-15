@@ -412,6 +412,11 @@
       .cs-grid .card{margin:0; min-width:0}
       .cs-grid .cs-wide{grid-column:1 / -1}
       .sub-body{overflow-x:auto; -webkit-overflow-scrolling:touch; max-width:100%}
+      /* Wide diagrams scroll inside this wrapper only: the wrapper is the
+         element that scrolls, never the card or the page, so a diagram
+         wider than a phone stays inside its card with its full size kept
+         for sideways scrolling. */
+      .svg-scroll{overflow-x:auto; overflow-y:hidden; max-width:100%; -webkit-overflow-scrolling:touch}
       @media (max-width:760px){
         .trend-inputs{grid-template-columns:1fr 1fr}
         .cs-grid{grid-template-columns:1fr}
@@ -437,7 +442,9 @@
         .nav, #to-top, #progress, .fold-tools{display:none}
       }
       /* ---------- figure & table captions, Figures & Tables index ---------- */
-      .fig-cap{font-size:13.5px; line-height:1.55; color:var(--ink-2); margin:12px 0 6px}
+      .fig-cap{font-size:13.5px; line-height:1.55; color:var(--ink-2); margin:12px 0 6px; background:var(--card)}
+      [id^="chart-"]{background:var(--card)}
+      .cmp-table{background:var(--card)}
       .fig-cap b{color:var(--ink); font-weight:600}
       .figx-grid{display:grid; grid-template-columns:1fr; gap:18px; margin-top:8px}
       .figx{background:var(--card); border-radius:20px; padding:24px 26px 16px; min-width:0}
@@ -456,6 +463,7 @@
          only, tied to scroll position. Nothing is hidden by CSS: with no
          script, or with reduced motion, every figure sits still and fully
          visible. This rule is the belt-and-braces override. */
+      .sm-fig{transform-origin:center center}
       @media (prefers-reduced-motion: reduce){
         .sm-fig{transform:none !important; opacity:1 !important}
       }
@@ -1318,7 +1326,7 @@
               <summary><h3 class="chart-title">Visual · The roast spectrum: what changes from light to dark</h3></summary>
               <div class="sub-body">
                 <p class="chart-sub">One bean, taken further. Every step darker trades the raw materials of acidity for the products of deeper browning — and makes the bean physically easier to extract.</p>
-                <svg class="wide-svg" viewBox="0 0 720 300" role="img" aria-label="Roast spectrum diagram from light to dark roast showing solubility and porosity rising, density and chlorogenic acids falling, and flavour shifting from bright acidity to bitterness">
+                <div class="svg-scroll"><svg class="wide-svg" viewBox="0 0 720 300" role="img" aria-label="Roast spectrum diagram from light to dark roast showing solubility and porosity rising, density and chlorogenic acids falling, and flavour shifting from bright acidity to bitterness">
                   <defs>
                     <linearGradient id="roastGrad" x1="0" y1="0" x2="1" y2="0">
                       <stop offset="0" stop-color="#d9a066"/><stop offset="0.45" stop-color="#9a6236"/>
@@ -1342,7 +1350,7 @@
                   <g stroke="#b35c12" stroke-width="2.5" fill="none">
                     <path d="M470 116 L540 116"/><path d="M470 176 L540 176"/><path d="M470 236 L540 236"/>
                   </g>
-                </svg>
+                </svg></div>
                 <p class="chart-note">Schematic, roast is a continuum and “light / medium / dark” are loose labels, but the directions are consistent: darker means more porous, less dense, more soluble, less acidic, more bitter. Practical consequence: a dark roast usually wants a slightly coarser grind or cooler water than a light roast of the same coffee, because its extraction runs ahead of the clock, and a light roast's stubbornness is why it so often tastes sour when under-extracted.</p>
               </div>
             </details>
@@ -1365,7 +1373,7 @@
               <summary><h3 class="chart-title">Five ways from cherry to green bean (Diagram)</h3></summary>
               <div class="sub-body">
                 <p class="chart-sub">The five methods side by side: what stays on the seed, whether air can reach it, and how long the defining step takes. Every method ends the same way, dried to about 10 to 12 percent moisture and hulled.</p>
-                <svg class="wide-svg" viewBox="0 0 720 356" role="img" aria-label="Five ways from cherry to green bean: washed, natural, honey, aerobic and anaerobic compared on what stays on the seed, oxygen, and typical time">
+                <div class="svg-scroll"><svg class="wide-svg" viewBox="0 0 720 356" role="img" aria-label="Five ways from cherry to green bean: washed, natural, honey, aerobic and anaerobic compared on what stays on the seed, oxygen, and typical time">
                   <g font-size="15" font-weight="700" style="fill:var(--ink)" text-anchor="middle">
                     <text x="76" y="34">Washed</text>
                     <text x="220" y="34">Natural</text>
@@ -1420,7 +1428,7 @@
                   </g>
                   <rect x="196" y="300" width="328" height="34" rx="17" style="fill:var(--band)" stroke="#b35c12" stroke-width="1.5"/>
                   <text x="360" y="322" font-size="13.5" font-weight="600" style="fill:var(--ink)" text-anchor="middle">Green bean, at about 10–12% moisture</text>
-                </svg>
+                </svg></div>
                 <p class="chart-note">Schematic summary of the five subsections below; the times are the ranges those subsections cite, and the full comparison, with water use and cup profile, is in the table at the end of this section.</p>
               </div>
             </details>
@@ -1637,7 +1645,7 @@
               <summary><h3 class="sum-h3">The sealed tank over time, and the three set-ups (Figure)</h3></summary>
               <div class="sub-body">
                 <p class="chart-sub">The sealed tank over time: what changes inside as the hours pass, and the vessels that produce those changes, with the open tank beside them for comparison.</p>
-                <svg class="wide-svg" viewBox="0 0 720 664" role="img" aria-label="Sealed tank over time: chart of oxygen falling, carbon dioxide rising and pH falling across 192 hours, above a schematic of a SIAF tank with airlock, a vacuum bag, a CO2-injected bag and an open tank">
+                <div class="svg-scroll"><svg class="wide-svg" viewBox="0 0 720 664" role="img" aria-label="Sealed tank over time: chart of oxygen falling, carbon dioxide rising and pH falling across 192 hours, above a schematic of a SIAF tank with airlock, a vacuum bag, a CO2-injected bag and an open tank">
                   <g font-size="13" style="fill:var(--ink-2)">
                     <text x="86" y="30" font-weight="600" style="fill:var(--ink)">Inside the sealed tank</text>
                   </g>
@@ -1719,7 +1727,7 @@
                     <text x="614" y="616">no lid: the comparison case,</text>
                     <text x="614" y="632">called semi-anaerobic [21]</text>
                   </g>
-                </svg>
+                </svg></div>
                 <p class="chart-note">Schematic. The three curves are smooth shapes anchored to the trial values in the text (oxygen used up early, CO<sub>2</sub> taking over the gas in the tank, pH 5.8 falling to 4.4 within 72 hours, runs lasting up to 192 hours); they are not traces measured minute by minute in one tank, and the exact path differs with the coffee, the vessel and the temperature. See Assumptions for what is inferred rather than measured.</p>
               </div>
             </details>
@@ -1842,7 +1850,7 @@
               <summary><h3 class="sum-h3">Why agitation works: the boundary layer, drawn (Diagram)</h3></summary>
               <div class="sub-body">
                 <p class="body-txt">A particle sitting in still, already-concentrated water stops extracting: the gradient at its surface collapses. Swirling, stirring or pouring in pulses replaces that saturated boundary layer with fresher water and restarts the gradient. You are not "helping the water in", you are restoring the slope that diffusion climbs down.</p>
-                <svg class="wide-svg" viewBox="0 0 720 240" role="img" aria-label="Two-panel diagram of a coffee particle: in still water a saturated boundary layer surrounds it and extraction stalls; after a swirl, fresh water restores the concentration gradient and extraction restarts" style="width:100%; height:auto; display:block; margin-top:14px">
+                <div class="svg-scroll"><svg class="wide-svg" viewBox="0 0 720 240" role="img" aria-label="Two-panel diagram of a coffee particle: in still water a saturated boundary layer surrounds it and extraction stalls; after a swirl, fresh water restores the concentration gradient and extraction restarts" style="width:100%; height:auto; display:block; margin-top:14px">
                   <circle cx="180" cy="105" r="52" fill="#8a5a33"/>
                   <circle cx="180" cy="105" r="72" fill="none" stroke="#c98f3d" stroke-width="14" opacity="0.45"/>
                   <circle cx="180" cy="105" r="94" fill="none" stroke="#c98f3d" stroke-width="8" opacity="0.2"/>
@@ -1858,7 +1866,7 @@
                     <text x="540" y="228" text-anchor="middle" font-weight="600" style="fill:var(--ink)">After a swirl · it restarts</text>
                     <text x="540" y="26" text-anchor="middle">fresh water, gradient restored</text>
                   </g>
-                </svg>
+                </svg></div>
               </div>
             </details>
             <details class="chart-card subfold">
@@ -2226,7 +2234,7 @@
                   <li><b>Retention is geometry too.</b> Every chamber corner and exit chute is dead space where grounds lodge, often 0.5–3 g (0.02–0.11 oz) in hopper-fed designs, exchanging with the next dose and smearing yesterday's setting into today's. Near-vertical chutes and single-dose designs shrink that dead space; purging a few grams after a setting change clears it.</li>
                   <li><b>The numbers, side by side.</b> Flat sets: 50–98 mm (1.97–3.86 in) diameter, two rings face to face, particles walk the full radius outward — more teeth met per particle. Conical sets: ≈ 38–83 mm (1.50–3.27 in), a cone inside a ring, gravity feeds a short, steep path, fewer cuts per particle, usually at lower rotational speed. Cutting angle and tooth depth are ground into the steel by the maker and are not user-adjustable; the two numbers a user <em>can</em> ruin are the gap (the grind setting) and the alignment (a tilt of a few tens of micrometres · a few ten-thousandths of an inch across the face, the size of the fines themselves).</li>
                   <li><b>What that does to the distribution, schematic.</b> Same coffee, same nominal setting, drawn as the two typical shapes (schematic curves, not measurements of a specific grinder):
-                    <svg class="wide-svg" viewBox="0 0 680 210" role="img" aria-label="Schematic particle size distributions: a flat burr set gives a narrower main peak with a smaller fines shoulder; a conical set gives a wider main peak with a fatter fines shoulder" style="width:100%; height:auto; display:block; margin:12px 0 4px">
+                    <div class="svg-scroll"><svg class="wide-svg" viewBox="0 0 680 210" role="img" aria-label="Schematic particle size distributions: a flat burr set gives a narrower main peak with a smaller fines shoulder; a conical set gives a wider main peak with a fatter fines shoulder" style="width:100%; height:auto; display:block; margin:12px 0 4px">
                       <line x1="50" y1="170" x2="640" y2="170" style="stroke:var(--chart-axis)" stroke-width="1.2"/>
                       <line x1="50" y1="24" x2="50" y2="170" style="stroke:var(--chart-axis)" stroke-width="1.2"/>
                       <path d="M70 170 C110 168 128 160 142 120 C152 88 160 52 176 46 C194 52 202 96 216 132 C228 160 244 168 280 170 Z" fill="#b35c12" opacity="0.20"/>
@@ -2239,7 +2247,7 @@
                         <text x="430" y="140" text-anchor="middle" style="fill:#4a90c2" font-weight="600">conical, wider spread, fatter fines shoulder</text>
                         <text x="345" y="192" text-anchor="middle">particle size → (fines at left, coarse tail at right)</text>
                       </g>
-                    </svg>
+                    </svg></div>
                   </li>
                   <li><b>A worked comparison (illustrative, run yours by Chapter 16's method).</b> Take two grinders at the same 600 µm (0.024 in) median. Suppose, illustratively, the flat set puts 8% of mass in fines and the conical set 14%. By Chapter 4's surface arithmetic, fines carry ≈ 47% of the working surface in the first grind and ≈ 62% in the second, so at the <em>same</em> setting the conical grind presents roughly a third more extraction interface, and its bed permeability is lower (fines throttle flow, Chapter 5): expect it to draw down slower and extract ahead of the flat grind until you open the setting up. The percentages are a worked example, not a measurement, sieve or image your own grinders' output to get your numbers.</li>
                   <li><b>Heat and static are side effects.</b> Friction warms the grounds slightly and static scatters fines onto every surface, annoying, measurable, and mostly a workflow problem rather than a flavour one at home scale.</li>
@@ -2250,7 +2258,7 @@
               <summary><h3 class="chart-title">Diagram · Burr geometry: two paths through the teeth</h3></summary>
               <div class="sub-body">
                 <p class="chart-sub">Cross-sections, schematic and not to scale. Follow one bean: where it enters, which teeth it meets, and the single gap it must fit through to leave. The path is the difference between the two designs, everything else follows from it. On a narrow phone screen this diagram keeps its full size inside its panel, so scroll it sideways to read both cross-sections at readable type.</p>
-                <svg viewBox="0 0 720 372" role="img" aria-label="Cross-section diagrams of flat burrs and conical burrs: flat burrs feed beans at the centre and walk them outward across breaker and finishing teeth to an exit gap at the rim; conical burrs feed beans at the top and gravity carries them down the cone to an exit gap at the bottom">
+                <div class="svg-scroll"><svg viewBox="0 0 720 372" role="img" aria-label="Cross-section diagrams of flat burrs and conical burrs: flat burrs feed beans at the centre and walk them outward across breaker and finishing teeth to an exit gap at the rim; conical burrs feed beans at the top and gravity carries them down the cone to an exit gap at the bottom">
                   <defs>
                     <marker id="arrBurr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b35c12"/></marker>
                   </defs>
@@ -2307,7 +2315,7 @@
                     <text x="540" y="352" text-anchor="middle">fewer cuts per particle, usually lower speed</text>
                   </g>
                   <text x="540" y="306" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--accent-ink)">the bottom gap = the grind setting</text>
-                </svg>
+                </svg></div>
                 <p class="chart-note">Read the two paths against the distribution chart above: the flat burr's longer gauntlet of teeth is why flat sets <em>typically</em> produce the narrower main population, and the conical set's short gravity path is part of why conical sets typically carry the fatter fines shoulder. Typically, not always, tooth design, diameter, speed and alignment can each outweigh the family difference, which is why two grinders of the same type still brew differently.</p>
               </div>
             </details>
@@ -2469,7 +2477,7 @@
               <summary><h3 class="chart-title">Diagram · Anatomy of a coffee bed</h3></summary>
               <div class="sub-body">
                 <p class="chart-sub">A dripper in cross-section. Gravity drives flow; the bed and the paper resist it; any weak path steals it.</p>
-                <svg class="wide-svg" viewBox="0 0 800 430" role="img" aria-label="Cross-section diagram of a coffee dripper bed showing water pool, grounds, fines layer, filter paper and a channel along the wall">
+                <div class="svg-scroll"><svg class="wide-svg" viewBox="0 0 800 430" role="img" aria-label="Cross-section diagram of a coffee dripper bed showing water pool, grounds, fines layer, filter paper and a channel along the wall">
                   <defs>
                     <marker id="arrB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
                       <path d="M0,0 L10,5 L0,10 z" fill="#b35c12"/>
@@ -2499,7 +2507,7 @@
                   <line x1="420" y1="298" x2="546" y2="296" style="stroke:var(--ink-3)" stroke-width="1"/>
                   <line x1="238" y1="212" x2="176" y2="200" style="stroke:var(--ink-3)" stroke-width="1"/>
                   <path d="M446,318 C456,330 464,338 472,346" fill="none" style="stroke:var(--ink-3)" stroke-width="1"/>
-                </svg>
+                </svg></div>
                 <p class="chart-note">Schematic, not to scale. The physics to carry away: total resistance is the bed's resistance plus the fines layer's, in series, the thinnest, finest layer can dominate the whole flow.</p>
               </div>
             </details>
@@ -2720,7 +2728,7 @@
               <summary><h3 class="chart-title">Diagram · The SCA water targets as ranges</h3></summary>
               <div class="sub-body">
                 <p class="chart-sub">Brewing water is a specification, not a purity contest. Each bar is the accepted range; the tick is the target.</p>
-                <svg class="wide-svg" viewBox="0 0 720 250" role="img" aria-label="Range bars showing Specialty Coffee Association water targets for total dissolved solids, calcium hardness and alkalinity">
+                <div class="svg-scroll"><svg class="wide-svg" viewBox="0 0 720 250" role="img" aria-label="Range bars showing Specialty Coffee Association water targets for total dissolved solids, calcium hardness and alkalinity">
                   <g font-size="14.5" style="fill:var(--ink-2)">
                     <text x="0" y="42" font-weight="600" style="fill:var(--ink)">Total dissolved solids</text>
                     <text x="0" y="64" font-size="12.5" style="fill:var(--ink-3)">mg/L (≈ ppm) · scale 0–300</text>
@@ -2744,7 +2752,7 @@
                   <rect x="382" y="186" width="88" height="18" rx="9" style="fill:var(--accent)" opacity="0.45"/>
                   <rect x="424" y="180" width="3.5" height="30" style="fill:var(--accent)"/>
                   <text x="426" y="224" font-size="12.5" text-anchor="middle" style="fill:var(--accent-ink)" font-weight="600">target ~40</text>
-                </svg>
+                </svg></div>
                 <p class="chart-note">Ranges and targets follow the 2009 SCAA water standard [2] (alkalinity is specified as "at or near 40 mg/L (≈40 ppm)," shown here as a narrow band around the target). Note the asymmetry: the targets sit well below the top of each range, the standard is steering you away from hard water, not toward it. A different, newer document, SCA Standard 310-2021, specifies <em>calcium</em> hardness 50–175 ppm as CaCO<sub>3</sub>, alkalinity 40–70 ppm and pH 6–8, with no TDS target. The SCAE Water Chart is a separate, older document (2016) specifying total hardness 50–175 ppm, alkalinity 40–75 ppm and pH 6.5–8. The three documents are not interchangeable.</p>
               </div>
             </details>
@@ -2766,7 +2774,7 @@
               <summary><h3 class="chart-title">Diagram · Mineralization in practice: four waters, side by side</h3></summary>
               <div class="sub-body">
                 <p class="chart-sub">Hardness (GH) and alkalinity (KH) for four waters you might actually brew with, in mg/L as CaCO<sub>3</sub> (≈ ppm). Only the third row is a standard, the 2009 SCAA targets. The tap rows are worked examples: yours will differ, which is the entire argument for measuring (recipe panel below).</p>
-                <svg class="wide-svg" viewBox="0 0 720 336" role="img" aria-label="Bar diagram comparing hardness and alkalinity of four waters: distilled water near zero for both, a soft tap water example at 45 hardness and 38 alkalinity, water built to the SCA targets at 68 hardness and 40 alkalinity, and a hard tap water example at 260 hardness and 190 alkalinity, all in milligrams per litre">
+                <div class="svg-scroll"><svg class="wide-svg" viewBox="0 0 720 336" role="img" aria-label="Bar diagram comparing hardness and alkalinity of four waters: distilled water near zero for both, a soft tap water example at 45 hardness and 38 alkalinity, water built to the SCA targets at 68 hardness and 40 alkalinity, and a hard tap water example at 260 hardness and 190 alkalinity, all in milligrams per litre">
                   <rect x="250" y="8" width="14" height="14" style="fill:var(--accent)" opacity="0.55"/>
                   <text x="272" y="20" font-size="13.5" style="fill:var(--ink-2)">Hardness (GH)</text>
                   <rect x="478" y="8" width="14" height="14" fill="#4a90c2" opacity="0.55"/>
@@ -2800,7 +2808,7 @@
                     <text x="639" y="283" font-size="12.5" style="fill:var(--ink-2)">260</text>
                     <text x="537" y="302" font-size="12.5" style="fill:var(--ink-2)">190</text>
                   </g>
-                </svg>
+                </svg></div>
                 <p class="chart-note">Mineralization is a recipe with two independent ingredients, not a single “amount of minerals”. Note how the rows fail differently: distilled water fails on both axes (nothing to extract with, nothing to buffer with), while hard tap water fails mostly on alkalinity, its 190 mg/L (≈190 ppm) of buffer erases acidity long before its hardness becomes the problem. That is why diluting hard water (Route A, below) works: it cuts the buffer back toward 40 while the hardness is still usable.</p>
               </div>
             </details>
@@ -3130,7 +3138,7 @@
               <summary><h3 class="chart-title">Diagram · Anatomy of a puck</h3></summary>
               <div class="sub-body">
                 <p class="chart-sub">A portafilter in cross-section during extraction. Pressure is nearly uniform above the puck and near zero below it, almost the entire 9 bar (131 psi) drops across about 12 mm (0.47 in) of coffee.</p>
-                <svg class="wide-svg" viewBox="0 0 820 400" role="img" aria-label="Cross-section diagram of an espresso portafilter showing shower screen, coffee puck, basket holes, a crack channel and espresso streams">
+                <div class="svg-scroll"><svg class="wide-svg" viewBox="0 0 820 400" role="img" aria-label="Cross-section diagram of an espresso portafilter showing shower screen, coffee puck, basket holes, a crack channel and espresso streams">
                   <defs>
                     <marker id="arrP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
                       <path d="M0,0 L10,5 L0,10 z" fill="#b35c12"/>
@@ -3167,7 +3175,7 @@
                   <line x1="470" y1="132" x2="522" y2="136" style="stroke:var(--ink-3)" stroke-width="1"/>
                   <line x1="436" y1="158" x2="522" y2="170" style="stroke:var(--ink-3)" stroke-width="1.2"/>
                   <line x1="478" y1="222" x2="522" y2="226" style="stroke:var(--ink-3)" stroke-width="1"/>
-                </svg>
+                </svg></div>
                 <p class="chart-note">Schematic, not to scale. Because the pressure drop is concentrated in the puck, any local weakness (a crack from a knock, a low-density streak from uneven distribution) becomes the path of least resistance for the entire flow.</p>
               </div>
             </details>
@@ -3362,7 +3370,7 @@
               <summary><h3 class="chart-title">Diagram · Anatomy of a shot</h3></summary>
               <div class="sub-body">
                 <p class="chart-sub">A settled espresso separates into three visible strata, a cross-section of everything the previous chapters did.</p>
-                <svg class="wide-svg" viewBox="0 0 830 340" role="img" aria-label="Diagram of an espresso shot in a glass showing crema, body and heart layers">
+                <div class="svg-scroll"><svg class="wide-svg" viewBox="0 0 830 340" role="img" aria-label="Diagram of an espresso shot in a glass showing crema, body and heart layers">
                   <!-- glass -->
                   <path d="M270,60 L450,60 L432,290 L288,290 Z" fill="none" style="stroke:var(--ink-3)" stroke-width="2.5"/>
                   <!-- heart -->
@@ -3393,7 +3401,7 @@
                   <line x1="446" y1="112" x2="480" y2="114" style="stroke:var(--ink-3)" stroke-width="1"/>
                   <line x1="443" y1="194" x2="480" y2="192" style="stroke:var(--ink-3)" stroke-width="1"/>
                   <line x1="439" y1="262" x2="480" y2="262" style="stroke:var(--ink-3)" stroke-width="1"/>
-                </svg>
+                </svg></div>
                 <p class="chart-note">Schematic. The layers are a density gradient, not three separate liquids: the darkest, densest fraction sinks, the gas-lifted emulsion floats. Stirring recombines them into the homogeneous shot the control chart assumes.</p>
               </div>
             </details>
@@ -3537,7 +3545,7 @@
               <summary><h3 class="chart-title">Laplace pressure vs. bubble size</h3></summary>
               <div class="sub-body">
                 <p class="chart-sub">Excess pressure inside a milk bubble against its diameter, from ΔP = 2γ/r with γ ≈ 0.042 N/m for warm milk. The curve is a hyperbola: pressure explodes as bubbles shrink. Diameter axis is logarithmic.</p>
-                <svg class="wide-svg" viewBox="0 0 720 380" role="img" aria-label="Chart of Laplace pressure against bubble diameter showing microfoam bubbles at tens of micrometres holding thousands of pascals while coarse froth bubbles hold only hundreds">
+                <div class="svg-scroll"><svg class="wide-svg" viewBox="0 0 720 380" role="img" aria-label="Chart of Laplace pressure against bubble diameter showing microfoam bubbles at tens of micrometres holding thousands of pascals while coarse froth bubbles hold only hundreds">
                   <g style="stroke:var(--chart-grid)" stroke-width="1">
                     <line x1="90" y1="40" x2="680" y2="40"/><line x1="90" y1="105" x2="680" y2="105"/>
                     <line x1="90" y1="170" x2="680" y2="170"/><line x1="90" y1="235" x2="680" y2="235"/>
@@ -3570,7 +3578,7 @@
                     <text x="452" y="252" font-weight="600" style="fill:var(--ink-2)">coarse froth · ~560 Pa (0.08 psi)</text>
                     <text x="452" y="270" font-size="12.5" style="fill:var(--ink-3)">mixed sizes → gas migrates → coarsens</text>
                   </g>
-                </svg>
+                </svg></div>
                 <p class="chart-note">Model: ΔP = 2γ/r for a bubble in liquid (a free soap bubble in air, with two surfaces, would be 4γ/r), plotted against diameter with r = d/2 and γ ≈ 0.042 N/m for warm milk. A 30 µm (0.0012 in) microfoam bubble (15 µm radius) sits at ≈ 5,600 Pa (0.81 psi); a 300 µm (0.012 in) froth bubble at ≈ 560 Pa (0.08 psi). The physics that matters is the shape of the curve and the ten-to-one pressure gap between the two marked foams, which survives the corrected γ.</p>
               </div>
             </details>
@@ -3584,7 +3592,7 @@
                   <li><b>The ceiling, ~70 °C (158 °F).</b> Whey proteins begin to denature at about 70 °C (158 °F); past that, foam stability falls away progressively and cooked, sulfurous notes appear, while perceived sweetness fades. This is a one-way door, denaturation doesn't reverse as the milk cools. Steam to 60–65 °C (140–149 °F) (the pitcher too hot to hold comfortably), and let carryover heat do the rest.</li>
                   <li><b>Polish, then pour promptly.</b> Swirl the pitcher to re-fold any foam that has started to separate and knock out the odd large bubble with a tap on the counter. Then pour within seconds: drainage and Ostwald ripening started the moment the steam stopped, and the Laplace arithmetic above gives a separated foam no way back.</li>
                 </ul>
-                <svg class="wide-svg" viewBox="0 0 720 170" role="img" aria-label="Milk temperature gauge from 35 to 75 degrees Celsius: aeration ends around 35 to 40 degrees, the ideal steaming window is 60 to 65 degrees, and whey protein denaturation begins near 70 degrees" style="width:100%; height:auto; display:block; margin-top:18px">
+                <div class="svg-scroll"><svg class="wide-svg" viewBox="0 0 720 170" role="img" aria-label="Milk temperature gauge from 35 to 75 degrees Celsius: aeration ends around 35 to 40 degrees, the ideal steaming window is 60 to 65 degrees, and whey protein denaturation begins near 70 degrees" style="width:100%; height:auto; display:block; margin-top:18px">
                   <rect x="60" y="58" width="600" height="26" rx="13" style="fill:var(--chart-grid)"/>
                   <rect x="435" y="58" width="75" height="26" style="fill:var(--good)" opacity="0.75"/>
                   <rect x="585" y="58" width="75" height="26" rx="13" style="fill:#c0392b" opacity="0.65"/>
@@ -3601,7 +3609,7 @@
                     <text x="660" y="140" text-anchor="end" style="fill:#c0392b" font-weight="600">~70 °C (158 °F): whey denatures, foam dies</text>
                   </g>
                   <line x1="472" y1="46" x2="472" y2="56" style="stroke:var(--ink-3)" stroke-width="1.2"/>
-                </svg>
+                </svg></div>
                 <p class="chart-note">One tick explained: the 48 °C (118 °F) label is only a scale mark halfway along the bar, nothing in the milk changes at 48 °C. The meaningful temperatures are the ones in the text: aeration ends ~35–40 °C (95–104 °F), the target is 60–65 °C (140–149 °F), and the ceiling is ~70 °C (158 °F). The whole steaming window on one bar: air goes in cold, texture builds in the vortex, and the green band (60–65 °C (140–149 °F)) is where sweetness peaks and the proteins still hold. The red end is a one-way door.</p>
               </div>
             </details>
@@ -6303,20 +6311,20 @@
       }
       buildFigs();
 
-      /* ---- Scroll-linked figure motion (Apple scrollytelling style) ----
-         Every figure, diagram and chart eases in as it enters (fade, rise,
-         slight scale-up), then pins: midway across the screen it holds
-         still while the page scrolls a short way beneath it, then releases
-         and drifts gently against the scroll for the rest of the crossing,
-         so it lingers instead of sitting static, and settles back (fade,
-         small rise, slight scale-down) as it leaves. The pin is carried by
-         transform alone: the figure is never repositioned, no space is
-         added or removed, and nothing can be trapped or hidden by it.
-         Only transform and opacity are touched, so nothing forces layout:
-         an IntersectionObserver tracks which figures are near the screen
-         and one requestAnimationFrame pass per scroll frame positions just
-         those. With reduced motion requested, or no script at all, every
-         figure simply sits still, fully visible. */
+      /* ---- Scroll-linked figure motion (Apple style) ----
+         Every figure, diagram and chart fades in and grows very slightly
+         as it crosses the screen, then fades back a little as it leaves.
+         The motion is opacity and scale only: no pinning, and no vertical
+         or sideways shifting of any kind, and the scale never rises above
+         1, so a moving figure only ever takes up less room than its own
+         place on the page and can never slide across the words around it.
+         Each animated block holds both the picture and its caption, so
+         the two always move together and a caption can never drift over
+         its own chart. Only transform and opacity are touched, so nothing
+         forces layout: an IntersectionObserver tracks which figures are
+         near the screen and one requestAnimationFrame pass per scroll
+         frame positions just those. With reduced motion requested, or no
+         script at all, every figure simply sits still, fully visible. */
       (function(){
         var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
         if (reduceMQ.matches) return;
@@ -6327,6 +6335,15 @@
           if (fc) return fc;
           var fg = el.closest('figure');
           if (fg) return fg;
+          /* Charts, tables and bare diagrams: buildFigs() has already
+             placed the caption as a sibling of the picture in the same
+             parent, just after it (just before it, for tables). Animate
+             that shared parent instead, so the picture and its caption
+             form one block and always move together. */
+          var next = el.nextElementSibling, prev = el.previousElementSibling;
+          var cap = (next && next.classList.contains('fig-cap')) ? next
+                  : (prev && prev.classList.contains('fig-cap')) ? prev : null;
+          if (cap && el.parentNode) return el.parentNode;
           return el;
         }
         var stages = [], seen = new Set();
@@ -6334,10 +6351,11 @@
           if (el && !seen.has(el)){
             seen.add(el);
             el.classList.add('sm-fig');
-            stages.push({el: el, last: '', ty: 0, sc: 1});
+            stages.push({el: el, last: '', sc: 1});
           }
         }
         FIGS.forEach(function(e){ addStage(stageFor(e)); });
+        TABLES.forEach(function(e){ addStage(stageFor(e)); });
         var grid = document.getElementById('fig-index');
         if (grid){
           var cards = grid.querySelectorAll('.figx');
@@ -6354,42 +6372,26 @@
           var el = s.el, r = el.getBoundingClientRect();
           if (!r.height) return;
           var vh = window.innerHeight || 800;
-          /* Measure the figure's untransformed position: undo the
-             translate and scale this script last applied (scale is about
-             the element's centre), so the progress and pin maths below
-             track the real scroll, not the script's own output. */
+          /* Measure the figure's untransformed position: undo the scale
+             this script last applied (the scale is about the element's
+             centre), so the progress maths below tracks the real scroll,
+             not the script's own output. */
           var natH = s.sc ? r.height / s.sc : r.height;
-          var top = r.top - s.ty - (natH - r.height) / 2;
+          var top = r.top - (natH - r.height) / 2;
           var span = vh + Math.min(natH, vh);
           var p = clamp01((vh - top) / span);
-          /* Pin phase. The pin starts when the figure reaches mid-screen
-             (centred if it fits, near the top if it is taller than the
-             screen) and holds for a short scroll, between about 110 and
-             260 px of travel. While it holds, the progress lent to the
-             pin ("held") freezes the fade, drift and scale, and the same
-             amount is added to the translate, so the figure stays exactly
-             where it was on screen while the page moves beneath it. Over
-             the stretch that follows, the lent progress is handed back:
-             the figure releases, catches up, and rejoins its normal path
-             before the exit fade begins. */
-          var pinAt = natH >= vh ? (vh - Math.min(24, vh * 0.04)) / span : 0.5;
-          var pinLen = Math.min(260, Math.max(110, vh * 0.26)) / span;
-          var relLen = pinLen * 0.8;
-          var held = 0;
-          if (p > pinAt && p < pinAt + pinLen) held = p - pinAt;
-          else if (p >= pinAt + pinLen && p < pinAt + pinLen + relLen)
-            held = pinLen * (1 - (p - pinAt - pinLen) / relLen);
-          var pv = p - held;
-          var enter = smooth(0, 0.30, pv);
-          var exit = smooth(0.88, 1, pv);
+          var enter = smooth(0, 0.30, p);
+          var exit = smooth(0.88, 1, p);
           var op = enter * (1 - 0.72 * exit);
-          var ty = (1 - enter) * 34 + (0.5 - pv) * -18 * enter - 12 * exit + held * span;
+          /* Scale only, from 0.962 up to 1.000 and never above it: the
+             figure shrinks a touch inside its own box as it arrives and
+             leaves, and sits at full size in between. With no shift of
+             position at all, nothing on the page can be covered. */
           var sc = (0.962 + 0.038 * enter) * (1 - 0.02 * exit);
-          var tf = 'translate3d(0,' + ty.toFixed(1) + 'px,0) scale(' + sc.toFixed(3) + ')';
+          var tf = 'scale(' + sc.toFixed(3) + ')';
           var key = tf + '|' + op.toFixed(3);
           if (key !== s.last){
             s.last = key;
-            s.ty = ty;
             s.sc = sc;
             el.style.transform = tf;
             el.style.opacity = op.toFixed(3);
@@ -6433,7 +6435,7 @@
             s.el.style.transform = '';
             s.el.style.opacity = '';
             s.el.style.willChange = '';
-            s.ty = 0; s.sc = 1; s.last = '';
+            s.sc = 1; s.last = '';
           });
         });
         requestTick();
