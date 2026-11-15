@@ -715,6 +715,7 @@
           </a>
         </div>
         <div class="map-refs">
+          <a href="#architecture">Architecture &amp; flow diagrams</a>
           <a href="#protocol">Protocols</a>
           <a href="#equations">Equations, at a glance</a>
           <a href="#chart">Calculator</a>
@@ -777,7 +778,376 @@
               <text class="fl-cap" x="916" y="140" text-anchor="middle">Chapter 3</text>
             </g>
           </svg>
-          <p class="chart-note">Read it left to right. Part 2 changes the pressure driving the bed stage; Part 3 changes the bed’s shape; Part 4 asks how we know any of it, and how to test it yourself.</p>
+          <p class="chart-note">Read it left to right. Part 2 changes the pressure driving the bed stage; Part 3 changes the bed’s shape; Part 4 asks how we know any of it, and how to test it yourself. The full architecture, the guide’s and the brew’s, is mapped in <a href="#architecture">How everything fits together</a>, just below.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ARCHITECTURE & SYSTEM FLOW ================= -->
+    <section class="band alt fsec" id="architecture">
+      <div class="wrap">
+        <div class="narrow center">
+          <p class="eyebrow">Architecture · Guide map &amp; system flow</p>
+          <h2>How everything fits together.</h2>
+          <p class="lede">Two maps. The first shows how this guide is built: four parts, three ways in, and the supporting sections underneath every chapter. The other three show how the brew itself is built: one pipeline, the feedbacks that run inside it, where the five processes meet, and why filter, espresso and pour over are the same system with different drivers.</p>
+        </div>
+        <div class="flow-card" style="text-align:left">
+          <p class="flow-title">How to read these diagrams</p>
+          <p class="flow-sub" style="margin-bottom:8px">Boxes are stages, parts or processes. Arrows show what feeds or controls what, in the direction the arrow points. A double-headed arrow means the two sides change each other. Nothing in these four diagrams is a measurement: they are labelled schematics that organise the guide’s measured numbers and stated models, and each one names the chapters where its claims are evidenced. Where a number appears, it is a value already established in its chapter (for example 9 bar (131 psi) for espresso, Chapter 9), not a new result. Theoretical and measured content elsewhere in the guide keeps its own labels; these maps inherit them.</p>
+        </div>
+        <div class="flow-card">
+          <p class="flow-title">The guide, as a map (Figure 47)</p>
+          <p class="flow-sub">Four parts across the top, in reading order. Three reading paths in the middle: pick one, they all end in the same chapters. The supporting sections along the bottom sit underneath everything: every chapter draws on them, and each one is a single tap from the Guide Map above.</p>
+          <svg viewBox="0 0 1000 470" role="img" aria-label="Guide architecture diagram: four parts, three reading paths and the supporting sections">
+            <defs><marker id="flArrA1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#86868b"/></marker></defs>
+            <g>
+              <rect class="fl-box-acc" x="4" y="18" width="232" height="92" rx="16"/>
+              <text class="fl-t" x="120" y="56" text-anchor="middle">Part 1 · Filter</text>
+              <text class="fl-s" x="120" y="78" text-anchor="middle">Chapters 1–8 · gravity brewing</text>
+              <text class="fl-cap" x="120" y="134" text-anchor="middle">bean → diffusion → flow → heat → water</text>
+            </g>
+            <path class="fl-arr" d="M240 64 L256 64" marker-end="url(#flArrA1)"/>
+            <g>
+              <rect class="fl-box" x="260" y="18" width="232" height="92" rx="16"/>
+              <text class="fl-t" x="376" y="56" text-anchor="middle">Part 2 · Espresso</text>
+              <text class="fl-s" x="376" y="78" text-anchor="middle">Chapters 9–12 · the same physics</text>
+              <text class="fl-cap" x="376" y="134" text-anchor="middle">driven at 9 bar, plus milk</text>
+            </g>
+            <path class="fl-arr" d="M496 64 L512 64" marker-end="url(#flArrA1)"/>
+            <g>
+              <rect class="fl-box" x="516" y="18" width="232" height="92" rx="16"/>
+              <text class="fl-t" x="632" y="56" text-anchor="middle">Part 3 · Pour Over</text>
+              <text class="fl-s" x="632" y="78" text-anchor="middle">Chapters 13–16 · the vessel</text>
+              <text class="fl-cap" x="632" y="134" text-anchor="middle">geometry as boundary condition</text>
+            </g>
+            <path class="fl-arr" d="M752 64 L768 64" marker-end="url(#flArrA1)"/>
+            <g>
+              <rect class="fl-box" x="772" y="18" width="224" height="92" rx="16"/>
+              <text class="fl-t" x="884" y="56" text-anchor="middle">Part 4 · The Science</text>
+              <text class="fl-s" x="884" y="78" text-anchor="middle">Chapters 17–21 · evidence</text>
+              <text class="fl-cap" x="884" y="134" text-anchor="middle">disciplines · people · papers · senses</text>
+            </g>
+            <path class="fl-arr" d="M500 118 L500 152" marker-end="url(#flArrA1)"/>
+            <text class="fl-cap" x="516" y="140" text-anchor="start">three ways in, same chapters</text>
+            <g>
+              <rect class="fl-box-acc" x="4" y="160" width="320" height="104" rx="16"/>
+              <text class="fl-t" x="164" y="196" text-anchor="middle">Start here · 4 stops, ~20 min</text>
+              <text class="fl-s" x="164" y="218" text-anchor="middle">The Chart → Flow → Pour Over → Experiment</text>
+              <text class="fl-cap" x="164" y="288" text-anchor="middle">measurement first, experiment last</text>
+            </g>
+            <g>
+              <rect class="fl-box" x="340" y="160" width="320" height="104" rx="16"/>
+              <text class="fl-t" x="500" y="196" text-anchor="middle">Full read · Chapters 1–21</text>
+              <text class="fl-s" x="500" y="218" text-anchor="middle">in order, about two and a half hours</text>
+              <text class="fl-cap" x="500" y="288" text-anchor="middle">each part builds on the one before</text>
+            </g>
+            <g>
+              <rect class="fl-box" x="676" y="160" width="320" height="104" rx="16"/>
+              <text class="fl-t" x="836" y="196" text-anchor="middle">Search first</text>
+              <text class="fl-s" x="836" y="218" text-anchor="middle">the search box opens the matching chapter</text>
+              <text class="fl-cap" x="836" y="288" text-anchor="middle">chapters stand alone by design</text>
+            </g>
+            <path class="fl-arr" d="M500 272 L500 306" marker-end="url(#flArrA1)"/>
+            <text class="fl-cap" x="516" y="294" text-anchor="start">underneath every chapter</text>
+            <g>
+              <rect class="fl-box" x="4" y="314" width="184" height="92" rx="16"/>
+              <text class="fl-t" x="96" y="350" text-anchor="middle">Equations</text>
+              <text class="fl-s" x="96" y="372" text-anchor="middle">every law, at a glance</text>
+              <text class="fl-cap" x="96" y="430" text-anchor="middle">+ Calculator (Ch. 3)</text>
+            </g>
+            <g>
+              <rect class="fl-box" x="208" y="314" width="184" height="92" rx="16"/>
+              <text class="fl-t" x="300" y="350" text-anchor="middle">Home Lab</text>
+              <text class="fl-s" x="300" y="372" text-anchor="middle">four tests, your numbers</text>
+              <text class="fl-cap" x="300" y="430" text-anchor="middle">+ Protocols (Synthesis)</text>
+            </g>
+            <g>
+              <rect class="fl-box" x="412" y="314" width="184" height="92" rx="16"/>
+              <text class="fl-t" x="504" y="350" text-anchor="middle">Cheat Sheet</text>
+              <text class="fl-s" x="504" y="372" text-anchor="middle">the whole guide, one screen</text>
+              <text class="fl-cap" x="504" y="430" text-anchor="middle">windows · diagnosis · moves</text>
+            </g>
+            <g>
+              <rect class="fl-box" x="616" y="314" width="184" height="92" rx="16"/>
+              <text class="fl-t" x="708" y="350" text-anchor="middle">Terms</text>
+              <text class="fl-s" x="708" y="372" text-anchor="middle">glossary + Assumptions</text>
+              <text class="fl-cap" x="708" y="430" text-anchor="middle">what words and models mean</text>
+            </g>
+            <g>
+              <rect class="fl-box" x="820" y="314" width="176" height="92" rx="16"/>
+              <text class="fl-t" x="908" y="350" text-anchor="middle">References</text>
+              <text class="fl-s" x="908" y="372" text-anchor="middle">sources + Figures &amp; Tables</text>
+              <text class="fl-cap" x="908" y="430" text-anchor="middle">every visual, one shelf</text>
+            </g>
+          </svg>
+          <p class="chart-note">Schematic of the guide’s structure, not a measurement. Chapter counts, timings and the Start here order are the ones stated in the Guide Map above.</p>
+        </div>
+        <div class="flow-card">
+          <p class="flow-title">The brew pipeline, with its feedbacks (Figure 48)</p>
+          <p class="flow-sub">The end-to-end path every brew follows, in the order matter and water actually move. Read the top row left to right; then read the three feedback lines underneath, because the pipeline is not one-way: what happens downstream changes the stages upstream of it.</p>
+          <svg viewBox="0 0 1000 400" role="img" aria-label="Brew pipeline diagram with feedback loops: bean to cup">
+            <defs><marker id="flArrA2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#86868b"/></marker></defs>
+            <g><rect class="fl-box" x="4" y="22" width="100" height="84" rx="14"/><text class="fl-t" x="54" y="58" text-anchor="middle">Bean</text><text class="fl-s" x="54" y="80" text-anchor="middle">roast sets pores</text><text class="fl-cap" x="54" y="130" text-anchor="middle">Ch. 1</text></g>
+            <path class="fl-arr" d="M106 64 L114 64" marker-end="url(#flArrA2)"/>
+            <g><rect class="fl-box" x="116" y="22" width="100" height="84" rx="14"/><text class="fl-t" x="166" y="58" text-anchor="middle">Grind</text><text class="fl-s" x="166" y="80" text-anchor="middle">sizes + fines</text><text class="fl-cap" x="166" y="130" text-anchor="middle">Ch. 4</text></g>
+            <path class="fl-arr" d="M218 64 L226 64" marker-end="url(#flArrA2)"/>
+            <g><rect class="fl-box" x="228" y="22" width="100" height="84" rx="14"/><text class="fl-t" x="278" y="58" text-anchor="middle">Bed</text><text class="fl-s" x="278" y="80" text-anchor="middle">packed grounds</text><text class="fl-cap" x="278" y="130" text-anchor="middle">Ch. 5 · 13</text></g>
+            <path class="fl-arr" d="M330 64 L338 64" marker-end="url(#flArrA2)"/>
+            <g><rect class="fl-box" x="340" y="22" width="100" height="84" rx="14"/><text class="fl-t" x="390" y="58" text-anchor="middle">Water in</text><text class="fl-s" x="390" y="80" text-anchor="middle">hot, mineralised</text><text class="fl-cap" x="390" y="130" text-anchor="middle">Ch. 7 · 8</text></g>
+            <path class="fl-arr" d="M442 64 L450 64" marker-end="url(#flArrA2)"/>
+            <g><rect class="fl-box-acc" x="452" y="22" width="100" height="84" rx="14"/><text class="fl-t" x="502" y="58" text-anchor="middle">Flow</text><text class="fl-s" x="502" y="80" text-anchor="middle">Darcy’s law</text><text class="fl-cap" x="502" y="130" text-anchor="middle">Ch. 5</text></g>
+            <path class="fl-arr" d="M554 64 L562 64" marker-end="url(#flArrA2)"/>
+            <g><rect class="fl-box-acc" x="564" y="22" width="100" height="84" rx="14"/><text class="fl-t" x="614" y="58" text-anchor="middle">Diffusion</text><text class="fl-s" x="614" y="80" text-anchor="middle">the d² law</text><text class="fl-cap" x="614" y="130" text-anchor="middle">Ch. 2</text></g>
+            <path class="fl-arr" d="M666 64 L674 64" marker-end="url(#flArrA2)"/>
+            <g><rect class="fl-box" x="676" y="22" width="100" height="84" rx="14"/><text class="fl-t" x="726" y="58" text-anchor="middle">Heat</text><text class="fl-s" x="726" y="80" text-anchor="middle">sets every rate</text><text class="fl-cap" x="726" y="130" text-anchor="middle">Ch. 6</text></g>
+            <path class="fl-arr" d="M778 64 L786 64" marker-end="url(#flArrA2)"/>
+            <g><rect class="fl-box" x="788" y="22" width="100" height="84" rx="14"/><text class="fl-t" x="838" y="58" text-anchor="middle">Chemistry</text><text class="fl-s" x="838" y="80" text-anchor="middle">what dissolves</text><text class="fl-cap" x="838" y="130" text-anchor="middle">Ch. 2 · 7</text></g>
+            <path class="fl-arr" d="M890 64 L898 64" marker-end="url(#flArrA2)"/>
+            <g><rect class="fl-box" x="900" y="22" width="96" height="84" rx="14"/><text class="fl-t" x="948" y="58" text-anchor="middle">Cup</text><text class="fl-s" x="948" y="80" text-anchor="middle">TDS · yield</text><text class="fl-cap" x="948" y="130" text-anchor="middle">Ch. 3 · 21</text></g>
+            <path class="fl-arr" d="M502 112 C502 168, 614 168, 614 116" marker-end="url(#flArrA2)"/>
+            <text class="fl-s" x="558" y="186" text-anchor="middle">flow sets contact time; contact time sets how far diffusion gets (Ch. 2, Ch. 5)</text>
+            <path class="fl-arr" d="M166 112 C166 226, 502 226, 502 116" marker-end="url(#flArrA2)"/>
+            <path class="fl-arr" d="M166 226 L614 226" marker-end="url(#flArrA2)"/>
+            <text class="fl-s" x="500" y="252" text-anchor="middle">grind acts three ways at once: more surface area speeds diffusion, lower permeability slows flow, migrating fines can choke the bed (Ch. 4, Ch. 5)</text>
+            <path class="fl-arr" d="M726 112 C726 300, 614 300, 614 116" marker-end="url(#flArrA2)"/>
+            <path class="fl-arr" d="M726 300 L838 300" marker-end="url(#flArrA2)"/>
+            <text class="fl-s" x="500" y="326" text-anchor="middle">temperature acts on both: it speeds diffusion (Arrhenius, Ch. 6) and changes solubility and viscosity (Ch. 6, Ch. 7)</text>
+            <text class="fl-cap" x="500" y="362" text-anchor="middle">Schematic: arrows show influence, not measured rates. Heat and chemistry act throughout the brew, not only at their stage.</text>
+          </svg>
+          <p class="chart-note">Schematic, built from the guide’s stated models: Darcy’s law for flow (Chapter 5), the d² diffusion model (Chapter 2) and the Arrhenius temperature model (Chapter 6). No arrow here is a measured rate.</p>
+        </div>
+        <div class="flow-card">
+          <p class="flow-title">Five processes, one meeting point (Figure 49)</p>
+          <p class="flow-sub">Diffusion, flow, heat, chemistry and the senses are not five separate topics. Each one controls something, depends on something else, and all five meet at two measured numbers in the cup: extraction yield and TDS (Chapter 3). The senses then judge what those numbers cannot say (Chapter 21).</p>
+          <svg viewBox="0 0 1000 500" role="img" aria-label="Interaction diagram: diffusion flow heat chemistry and sensory meet at extraction yield and TDS">
+            <defs><marker id="flArrA3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#86868b"/></marker></defs>
+            <g>
+              <rect class="fl-box" x="20" y="20" width="290" height="100" rx="16"/>
+              <text class="fl-t" x="165" y="54" text-anchor="middle">Diffusion · Ch. 2</text>
+              <text class="fl-s" x="165" y="76" text-anchor="middle">controls: how fast compounds leave</text>
+              <text class="fl-s" x="165" y="94" text-anchor="middle">depends on: particle size, temperature</text>
+            </g>
+            <g>
+              <rect class="fl-box" x="690" y="20" width="290" height="100" rx="16"/>
+              <text class="fl-t" x="835" y="54" text-anchor="middle">Flow · Ch. 5</text>
+              <text class="fl-s" x="835" y="76" text-anchor="middle">controls: contact time, fresh water</text>
+              <text class="fl-s" x="835" y="94" text-anchor="middle">depends on: grind, bed, driving force</text>
+            </g>
+            <text class="fl-s" x="500" y="46" text-anchor="middle">flow renews the water at the</text>
+            <text class="fl-s" x="500" y="64" text-anchor="middle">particle surface, keeping the</text>
+            <text class="fl-s" x="500" y="82" text-anchor="middle">diffusion gradient alive</text>
+            <g>
+              <rect class="fl-box-acc" x="335" y="185" width="330" height="110" rx="16"/>
+              <text class="fl-t" x="500" y="224" text-anchor="middle">The meeting point</text>
+              <text class="fl-s" x="500" y="248" text-anchor="middle">extraction yield (%) · TDS (%)</text>
+              <text class="fl-s" x="500" y="268" text-anchor="middle">measured in the cup · Ch. 3</text>
+            </g>
+            <path class="fl-arr" d="M300 130 L420 180" marker-end="url(#flArrA3)"/>
+            <path class="fl-arr" d="M700 130 L580 180" marker-end="url(#flArrA3)"/>
+            <path class="fl-arr" d="M300 350 L420 300" marker-end="url(#flArrA3)"/>
+            <path class="fl-arr" d="M700 350 L580 300" marker-end="url(#flArrA3)"/>
+            <g>
+              <rect class="fl-box" x="20" y="360" width="290" height="100" rx="16"/>
+              <text class="fl-t" x="165" y="394" text-anchor="middle">Heat · Ch. 6</text>
+              <text class="fl-s" x="165" y="416" text-anchor="middle">controls: every rate, and viscosity</text>
+              <text class="fl-s" x="165" y="434" text-anchor="middle">depends on: kettle, brewer, room</text>
+            </g>
+            <g>
+              <rect class="fl-box" x="690" y="360" width="290" height="100" rx="16"/>
+              <text class="fl-t" x="835" y="394" text-anchor="middle">Chemistry · Ch. 7</text>
+              <text class="fl-s" x="835" y="416" text-anchor="middle">controls: what can dissolve, buffering</text>
+              <text class="fl-s" x="835" y="434" text-anchor="middle">depends on: water minerals, the bean</text>
+            </g>
+            <path class="fl-arr" d="M500 300 L500 340" marker-end="url(#flArrA3)"/>
+            <g>
+              <rect class="fl-box" x="335" y="348" width="330" height="100" rx="16"/>
+              <text class="fl-t" x="500" y="382" text-anchor="middle">The senses · Ch. 21</text>
+              <text class="fl-s" x="500" y="404" text-anchor="middle">controls: the verdict, flavour</text>
+              <text class="fl-s" x="500" y="422" text-anchor="middle">depends on: all of the above, plus you</text>
+            </g>
+            <text class="fl-cap" x="165" y="486" text-anchor="middle">heat speeds diffusion and thins the water (Ch. 6)</text>
+            <text class="fl-cap" x="835" y="486" text-anchor="middle">solubility sets the ceiling diffusion works toward (Ch. 2, Ch. 7)</text>
+          </svg>
+          <p class="chart-note">Schematic of dependencies stated in Chapters 2, 5, 6, 7 and 21. The meeting point is measured (a refractometer reading and a mass balance, Chapter 3); the arrows into it are the guide’s models, not measurements.</p>
+        </div>
+        <div class="flow-card">
+          <p class="flow-title">One pipeline, three drivers (Figure 50)</p>
+          <p class="flow-sub">Filter, espresso and pour over run the identical pipeline from Figure 48. Only three things change: the force driving the water, the bed it crosses, and who or what meters the flow. The brewer’s shape is not a fourth method; in pour over it is the boundary condition the pipeline runs inside (Part 3).</p>
+          <svg viewBox="0 0 1000 380" role="img" aria-label="Method comparison diagram: filter espresso and pour over as one pipeline with different drivers">
+            <defs><marker id="flArrA4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#86868b"/></marker></defs>
+            <text class="fl-cap" x="84" y="26" text-anchor="middle">method</text>
+            <text class="fl-cap" x="300" y="26" text-anchor="middle">shared start</text>
+            <text class="fl-cap" x="520" y="26" text-anchor="middle">the driver (what changes)</text>
+            <text class="fl-cap" x="742" y="26" text-anchor="middle">the bed</text>
+            <text class="fl-cap" x="920" y="26" text-anchor="middle">the cup</text>
+            <g><rect class="fl-box" x="4" y="40" width="160" height="84" rx="14"/><text class="fl-t" x="84" y="76" text-anchor="middle">Filter</text><text class="fl-s" x="84" y="98" text-anchor="middle">Part 1 · Ch. 1–8</text></g>
+            <path class="fl-arr" d="M168 82 L186 82" marker-end="url(#flArrA4)"/>
+            <g><rect class="fl-box" x="190" y="40" width="220" height="84" rx="14"/><text class="fl-t" x="300" y="76" text-anchor="middle">Bean → grind → bed</text><text class="fl-s" x="300" y="98" text-anchor="middle">identical in all three rows</text></g>
+            <path class="fl-arr" d="M414 82 L432 82" marker-end="url(#flArrA4)"/>
+            <g><rect class="fl-box-acc" x="436" y="40" width="220" height="84" rx="14"/><text class="fl-t" x="546" y="76" text-anchor="middle">Gravity</text><text class="fl-s" x="546" y="98" text-anchor="middle">a few cm of water head</text></g>
+            <path class="fl-arr" d="M660 82 L678 82" marker-end="url(#flArrA4)"/>
+            <g><rect class="fl-box" x="682" y="40" width="180" height="84" rx="14"/><text class="fl-t" x="772" y="76" text-anchor="middle">Open dripper bed</text><text class="fl-s" x="772" y="98" text-anchor="middle">you meter the pour</text></g>
+            <path class="fl-arr" d="M866 82 L884 82" marker-end="url(#flArrA4)"/>
+            <g><rect class="fl-box" x="888" y="40" width="108" height="84" rx="14"/><text class="fl-t" x="942" y="76" text-anchor="middle">Cup</text><text class="fl-s" x="942" y="98" text-anchor="middle">1.15–1.45% TDS</text></g>
+            <g><rect class="fl-box" x="4" y="148" width="160" height="84" rx="14"/><text class="fl-t" x="84" y="184" text-anchor="middle">Espresso</text><text class="fl-s" x="84" y="206" text-anchor="middle">Part 2 · Ch. 9–12</text></g>
+            <path class="fl-arr" d="M168 190 L186 190" marker-end="url(#flArrA4)"/>
+            <g><rect class="fl-box" x="190" y="148" width="220" height="84" rx="14"/><text class="fl-t" x="300" y="184" text-anchor="middle">Bean → grind → puck</text><text class="fl-s" x="300" y="206" text-anchor="middle">finer grind, tamped bed</text></g>
+            <path class="fl-arr" d="M414 190 L432 190" marker-end="url(#flArrA4)"/>
+            <g><rect class="fl-box-acc" x="436" y="148" width="220" height="84" rx="14"/><text class="fl-t" x="546" y="184" text-anchor="middle">Pump pressure</text><text class="fl-s" x="546" y="206" text-anchor="middle">9 bar (131 psi)</text></g>
+            <path class="fl-arr" d="M660 190 L678 190" marker-end="url(#flArrA4)"/>
+            <g><rect class="fl-box" x="682" y="148" width="180" height="84" rx="14"/><text class="fl-t" x="772" y="184" text-anchor="middle">Sealed puck, ~12 mm</text><text class="fl-s" x="772" y="206" text-anchor="middle">the basket meters it</text></g>
+            <path class="fl-arr" d="M866 190 L884 190" marker-end="url(#flArrA4)"/>
+            <g><rect class="fl-box" x="888" y="148" width="108" height="84" rx="14"/><text class="fl-t" x="942" y="184" text-anchor="middle">Shot</text><text class="fl-s" x="942" y="206" text-anchor="middle">7–12% TDS</text></g>
+            <g><rect class="fl-box" x="4" y="256" width="160" height="84" rx="14"/><text class="fl-t" x="84" y="292" text-anchor="middle">Pour over</text><text class="fl-s" x="84" y="314" text-anchor="middle">Part 3 · Ch. 13–16</text></g>
+            <path class="fl-arr" d="M168 298 L186 298" marker-end="url(#flArrA4)"/>
+            <g><rect class="fl-box" x="190" y="256" width="220" height="84" rx="14"/><text class="fl-t" x="300" y="292" text-anchor="middle">Bean → grind → bed</text><text class="fl-s" x="300" y="314" text-anchor="middle">identical in all three rows</text></g>
+            <path class="fl-arr" d="M414 298 L432 298" marker-end="url(#flArrA4)"/>
+            <g><rect class="fl-box-acc" x="436" y="256" width="220" height="84" rx="14"/><text class="fl-t" x="546" y="292" text-anchor="middle">Gravity + geometry</text><text class="fl-s" x="546" y="314" text-anchor="middle">brewer shape = boundary</text></g>
+            <path class="fl-arr" d="M660 298 L678 298" marker-end="url(#flArrA4)"/>
+            <g><rect class="fl-box" x="682" y="256" width="180" height="84" rx="14"/><text class="fl-t" x="772" y="292" text-anchor="middle">Cone or flat bed</text><text class="fl-s" x="772" y="314" text-anchor="middle">exits meter, or you do</text></g>
+            <path class="fl-arr" d="M866 298 L884 298" marker-end="url(#flArrA4)"/>
+            <g><rect class="fl-box" x="888" y="256" width="108" height="84" rx="14"/><text class="fl-t" x="942" y="292" text-anchor="middle">Cup</text><text class="fl-s" x="942" y="314" text-anchor="middle">1.15–1.45% TDS</text></g>
+            <text class="fl-cap" x="500" y="368" text-anchor="middle">Same diffusion, same heat, same chemistry in every row. Strength ranges are the windows stated in the Cheat Sheet.</text>
+          </svg>
+          <p class="chart-note">Schematic comparison. Driving pressures and strength windows are the values stated in Chapters 5, 9 and 13 and the Cheat Sheet; the claim that the pipeline is shared is the guide’s organising model, set out in the Introduction.</p>
+        </div>
+        <div class="flow-card">
+          <p class="flow-title">How the supporting sections feed each other (Figure 51)</p>
+          <p class="flow-sub">Figure 47 showed where the supporting sections sit. This one shows the traffic between them: the chapters are the source, everything else is derived from them, tested against them, or an index into them. Nothing in a supporting section introduces a claim the chapters do not carry.</p>
+          <svg viewBox="0 0 1000 460" role="img" aria-label="Supporting sections feed diagram: chapters feed the equations index, home lab, protocols, cheat sheet and figures index">
+            <defs><marker id="flArrA5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#86868b"/></marker></defs>
+            <g>
+              <rect class="fl-box" x="20" y="60" width="220" height="84" rx="16"/>
+              <text class="fl-t" x="130" y="96" text-anchor="middle">References</text>
+              <text class="fl-s" x="130" y="118" text-anchor="middle">the evidence underneath</text>
+            </g>
+            <g>
+              <rect class="fl-box" x="20" y="300" width="220" height="84" rx="16"/>
+              <text class="fl-t" x="130" y="336" text-anchor="middle">Terms &amp; Assumptions</text>
+              <text class="fl-s" x="130" y="358" text-anchor="middle">what words and models mean</text>
+            </g>
+            <path class="fl-arr" d="M244 102 L356 190" marker-end="url(#flArrA5)"/>
+            <text class="fl-s" x="300" y="128" text-anchor="middle">support the claims</text>
+            <path class="fl-arr" d="M244 342 L356 254" marker-end="url(#flArrA5)"/>
+            <text class="fl-s" x="300" y="330" text-anchor="middle">define and bound them</text>
+            <g>
+              <rect class="fl-box-acc" x="380" y="172" width="240" height="100" rx="16"/>
+              <text class="fl-t" x="500" y="210" text-anchor="middle">Chapters 1–21</text>
+              <text class="fl-s" x="500" y="234" text-anchor="middle">the source of every claim</text>
+            </g>
+            <path class="fl-arr" d="M624 190 L716 62" marker-end="url(#flArrA5)"/>
+            <path class="fl-arr" d="M624 210 L716 152" marker-end="url(#flArrA5)"/>
+            <path class="fl-arr" d="M624 234 L716 242" marker-end="url(#flArrA5)"/>
+            <path class="fl-arr" d="M624 254 L716 332" marker-end="url(#flArrA5)"/>
+            <g>
+              <rect class="fl-box" x="740" y="20" width="240" height="72" rx="14"/>
+              <text class="fl-t" x="860" y="50" text-anchor="middle">Equations index</text>
+              <text class="fl-s" x="860" y="70" text-anchor="middle">each chapter’s laws, collected</text>
+            </g>
+            <g>
+              <rect class="fl-box" x="740" y="110" width="240" height="72" rx="14"/>
+              <text class="fl-t" x="860" y="140" text-anchor="middle">Home Lab</text>
+              <text class="fl-s" x="860" y="160" text-anchor="middle">tests the chapters’ claims</text>
+            </g>
+            <g>
+              <rect class="fl-box" x="740" y="200" width="240" height="72" rx="14"/>
+              <text class="fl-t" x="860" y="230" text-anchor="middle">Protocols</text>
+              <text class="fl-s" x="860" y="250" text-anchor="middle">recipes derived, using the calculators</text>
+            </g>
+            <g>
+              <rect class="fl-box" x="740" y="290" width="240" height="72" rx="14"/>
+              <text class="fl-t" x="860" y="320" text-anchor="middle">Cheat Sheet</text>
+              <text class="fl-s" x="860" y="340" text-anchor="middle">the chapters, condensed</text>
+            </g>
+            <path class="fl-arr" d="M860 186 L860 196" marker-end="url(#flArrA5)"/>
+            <text class="fl-cap" x="876" y="196" text-anchor="start">tested numbers feed the recipes</text>
+            <path class="fl-arr" d="M500 276 L500 330" marker-end="url(#flArrA5)"/>
+            <g>
+              <rect class="fl-box" x="380" y="338" width="240" height="72" rx="14"/>
+              <text class="fl-t" x="500" y="368" text-anchor="middle">Figures &amp; Tables</text>
+              <text class="fl-s" x="500" y="388" text-anchor="middle">every visual in the guide, indexed</text>
+            </g>
+            <text class="fl-cap" x="500" y="440" text-anchor="middle">Schematic of the guide’s structure. Arrows show derivation and use, not importance.</text>
+          </svg>
+          <p class="chart-note">Schematic. The feed directions are the guide’s stated design: Home Lab tests chapter claims (Chapter 20’s method), Protocols are derived from the chapters and use the Chapter 3 calculator, and the Cheat Sheet condenses the chapters without adding claims.</p>
+        </div>
+        <details class="card subfold">
+          <summary><h3 class="sum-h3">Chapter-to-concept map: where each process lives (Table)</h3></summary>
+          <div class="sub-body">
+            <p class="body-txt">Every chapter, mapped against the five processes of Figure 49. <strong>Main</strong> means the chapter is that process’s home; <strong>Part</strong> means the process plays a real part but is led elsewhere; a dash means it barely appears. The last column names the equations and tools the chapter carries. Read down a column to find everywhere one idea reappears; read across a row to see what one chapter actually covers.</p>
+            <div style="overflow-x:auto">
+            <table class="cmp-table trend-table" id="map-chapters">
+              <thead><tr><th scope="col">Chapter</th><th scope="col">Flow</th><th scope="col">Diffusion</th><th scope="col">Heat</th><th scope="col">Chemistry</th><th scope="col">Sensory</th><th scope="col">Equations &amp; tools it carries</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">1 · The bean</th><td data-label="Flow">—</td><td data-label="Diffusion">Part</td><td data-label="Heat">Part</td><td data-label="Chemistry">Main</td><td data-label="Sensory">Part</td><td data-label="Equations &amp; tools">Processing comparison (Table 6); sealed-tank figure (Figure 45)</td></tr>
+                <tr><th scope="row">2 · Diffusion</th><td data-label="Flow">Part</td><td data-label="Diffusion">Main</td><td data-label="Heat">—</td><td data-label="Chemistry">Part</td><td data-label="Sensory">—</td><td data-label="Equations &amp; tools">Fick’s laws; the d² model; kinetics chart</td></tr>
+                <tr><th scope="row">3 · The Chart</th><td data-label="Flow">—</td><td data-label="Diffusion">—</td><td data-label="Heat">—</td><td data-label="Chemistry">Part</td><td data-label="Sensory">Part</td><td data-label="Equations &amp; tools">TDS and extraction yield; the calculator; the trend plotter</td></tr>
+                <tr><th scope="row">4 · The grind</th><td data-label="Flow">Part</td><td data-label="Diffusion">Part</td><td data-label="Heat">—</td><td data-label="Chemistry">—</td><td data-label="Sensory">—</td><td data-label="Equations &amp; tools">Particle size distribution; surface area per gram</td></tr>
+                <tr><th scope="row">5 · Flow</th><td data-label="Flow">Main</td><td data-label="Diffusion">Part</td><td data-label="Heat">—</td><td data-label="Chemistry">—</td><td data-label="Sensory">—</td><td data-label="Equations &amp; tools">Darcy’s law, Q = kAρg(h+L)/(μL); drawdown chart</td></tr>
+                <tr><th scope="row">6 · Heat</th><td data-label="Flow">Part</td><td data-label="Diffusion">Part</td><td data-label="Heat">Main</td><td data-label="Chemistry">—</td><td data-label="Sensory">—</td><td data-label="Equations &amp; tools">Arrhenius law (Ea ≈ 16 kJ/mol); Newton’s cooling; Home Lab Test 2</td></tr>
+                <tr><th scope="row">7 · Water</th><td data-label="Flow">—</td><td data-label="Diffusion">—</td><td data-label="Heat">—</td><td data-label="Chemistry">Main</td><td data-label="Sensory">Part</td><td data-label="Equations &amp; tools">GH/KH arithmetic; water recipe; Home Lab Test 3</td></tr>
+                <tr><th scope="row">8 · The bloom</th><td data-label="Flow">Part</td><td data-label="Diffusion">Part</td><td data-label="Heat">—</td><td data-label="Chemistry">Part</td><td data-label="Sensory">—</td><td data-label="Equations &amp; tools">Washburn imbibition; degassing curves</td></tr>
+                <tr><th scope="row">9 · The puck</th><td data-label="Flow">Main</td><td data-label="Diffusion">Part</td><td data-label="Heat">—</td><td data-label="Chemistry">—</td><td data-label="Sensory">—</td><td data-label="Equations &amp; tools">Darcy’s law at 9 bar (131 psi); flow vs. pressure chart</td></tr>
+                <tr><th scope="row">10 · Evenness</th><td data-label="Flow">Main</td><td data-label="Diffusion">Part</td><td data-label="Heat">—</td><td data-label="Chemistry">—</td><td data-label="Sensory">Part</td><td data-label="Equations &amp; tools">Two-path channeling worked example</td></tr>
+                <tr><th scope="row">11 · Crema</th><td data-label="Flow">Part</td><td data-label="Diffusion">—</td><td data-label="Heat">—</td><td data-label="Chemistry">Main</td><td data-label="Sensory">Part</td><td data-label="Equations &amp; tools">Laplace law in a bubble; espresso vs. filter (Table 1)</td></tr>
+                <tr><th scope="row">12 · Milk &amp; latte art</th><td data-label="Flow">Part</td><td data-label="Diffusion">—</td><td data-label="Heat">Part</td><td data-label="Chemistry">Part</td><td data-label="Sensory">Part</td><td data-label="Equations &amp; tools">Laplace pressure vs. bubble size; Home Lab Test 4</td></tr>
+                <tr><th scope="row">13 · Geometry</th><td data-label="Flow">Main</td><td data-label="Diffusion">Part</td><td data-label="Heat">—</td><td data-label="Chemistry">—</td><td data-label="Sensory">—</td><td data-label="Equations &amp; tools">Local Darcy flow and bed depth L(x); bypass worked example</td></tr>
+                <tr><th scope="row">14 · Brewers</th><td data-label="Flow">Main</td><td data-label="Diffusion">—</td><td data-label="Heat">Part</td><td data-label="Chemistry">—</td><td data-label="Sensory">—</td><td data-label="Equations &amp; tools">Brewer-by-brewer flow control comparison</td></tr>
+                <tr><th scope="row">15 · Evidence</th><td data-label="Flow">Part</td><td data-label="Diffusion">—</td><td data-label="Heat">—</td><td data-label="Chemistry">—</td><td data-label="Sensory">Main</td><td data-label="Equations &amp; tools">Reading Frost et al. (2019): TDS worked example</td></tr>
+                <tr><th scope="row">16 · Experiment</th><td data-label="Flow">Part</td><td data-label="Diffusion">Part</td><td data-label="Heat">Part</td><td data-label="Chemistry">Part</td><td data-label="Sensory">Part</td><td data-label="Equations &amp; tools">Controlled comparison design; repeat analysis (mean, range, SD)</td></tr>
+                <tr><th scope="row">17 · Disciplines</th><td data-label="Flow">Part</td><td data-label="Diffusion">Part</td><td data-label="Heat">Part</td><td data-label="Chemistry">Part</td><td data-label="Sensory">Part</td><td data-label="Equations &amp; tools">The evidence grades; the field’s map</td></tr>
+                <tr><th scope="row">18 · People</th><td data-label="Flow">—</td><td data-label="Diffusion">—</td><td data-label="Heat">—</td><td data-label="Chemistry">—</td><td data-label="Sensory">—</td><td data-label="Equations &amp; tools">Profiles only: who produced the work the other chapters use</td></tr>
+                <tr><th scope="row">19 · Library</th><td data-label="Flow">—</td><td data-label="Diffusion">—</td><td data-label="Heat">—</td><td data-label="Chemistry">—</td><td data-label="Sensory">—</td><td data-label="Equations &amp; tools">The papers under the guide; how to read one</td></tr>
+                <tr><th scope="row">20 · Models &amp; method</th><td data-label="Flow">Part</td><td data-label="Diffusion">Part</td><td data-label="Heat">Part</td><td data-label="Chemistry">—</td><td data-label="Sensory">—</td><td data-label="Equations &amp; tools">Transport toolkit: Hagen–Poiseuille, Kozeny–Carman, capillarity; experimental method</td></tr>
+                <tr><th scope="row">21 · The senses</th><td data-label="Flow">—</td><td data-label="Diffusion">—</td><td data-label="Heat">Part</td><td data-label="Chemistry">Part</td><td data-label="Sensory">Main</td><td data-label="Equations &amp; tools">Flavour wheel; TDS-gap worked example; cupping protocol</td></tr>
+              </tbody>
+            </table>
+            </div>
+            <p class="chart-note">A map of coverage, not a measurement. “Main” and “Part” are editorial judgements about where each process is treated, stated so you can check them against the chapters themselves.</p>
+          </div>
+        </details>
+        <details class="card subfold">
+          <summary><h3 class="sum-h3">Concept-to-method map: the same process, three methods (Table)</h3></summary>
+          <div class="sub-body">
+            <p class="body-txt">Figure 50 compared the drivers. This table goes one level deeper: each of the five processes, as it actually shows up in filter, in espresso and in pour over. Same process in every column; what changes is the driver, the geometry, the timescale or the strength it lands at.</p>
+            <div style="overflow-x:auto">
+            <table class="cmp-table trend-table" id="map-methods">
+              <thead><tr><th scope="col">Process</th><th scope="col">Filter (Part 1)</th><th scope="col">Espresso (Part 2)</th><th scope="col">Pour over (Part 3)</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Flow</th><td data-label="Filter">Gravity: a pool a few centimetres deep drives Darcy flow through an open bed (Ch. 5)</td><td data-label="Espresso">A pump at 9 bar (131 psi) drives Darcy flow through a sealed puck about 12 mm deep (Ch. 9)</td><td data-label="Pour over">Gravity again, but the brewer’s exits meter it: one large hole (you meter), three small holes, or an open base (Ch. 13–14)</td></tr>
+                <tr><th scope="row">Diffusion</th><td data-label="Filter">Particles around 600 µm (0.024 in); the d² clock runs in minutes, matched to the brew (Ch. 2, Ch. 4)</td><td data-label="Espresso">Particles around 200 µm (0.0079 in); the same d² clock runs in seconds, which is why the window is seconds wide (Ch. 10)</td><td data-label="Pour over">Filter-sized particles, but path length varies across the bed: deep centre, thin rim in a cone; near-even in a flat bed (Ch. 13)</td></tr>
+                <tr><th scope="row">Heat</th><td data-label="Filter">Kettle at 93–96 °C (199–205 °F); the slurry cools through the brew (Newton’s law, Ch. 6)</td><td data-label="Espresso">Boiler-held temperature over a 25–30 s shot; too short for much cooling, so stability is the machine’s job (Ch. 9)</td><td data-label="Pour over">As filter, plus the brewer’s material and mass decide how much heat the vessel steals (Ch. 6, Ch. 14)</td></tr>
+                <tr><th scope="row">Chemistry</th><td data-label="Filter">Water minerals set extraction and buffering (Ch. 7); paper holds back most oils</td><td data-label="Espresso">The same water chemistry, plus pressure emulsifying CO₂ and oils into crema (Ch. 11)</td><td data-label="Pour over">The same water chemistry; the paper (cone vs. wave) and any bypass change what reaches the cup undiluted (Ch. 13–14)</td></tr>
+                <tr><th scope="row">Sensory</th><td data-label="Filter">Judged at 1.15–1.45% TDS and 18–22% extraction (Ch. 3, Ch. 21)</td><td data-label="Espresso">Judged at 7–12% TDS and the same 18–22% extraction; crema adds a texture the numbers do not capture (Ch. 11, Ch. 21)</td><td data-label="Pour over">Judged at filter strengths; geometry shifts evenness, which panels could detect at a 0.24-point TDS difference between two discriminable coffees (Ch. 15)</td></tr>
+              </tbody>
+            </table>
+            </div>
+            <p class="chart-note">Values are the windows and sizes stated in the chapters named in each cell. The process rows are the guide’s model of brewing (Figure 49); the cells summarise those chapters, they are not new measurements.</p>
+          </div>
+        </details>
+        <details class="card subfold">
+          <summary><h3 class="sum-h3">Variable map: the knobs, what they move, and where they are explained (Table)</h3></summary>
+          <div class="sub-body">
+            <p class="body-txt">The seven knobs a brewer actually controls. Each one moves more than one process, which is the whole lesson of Figure 48’s feedback lines. Change one knob at a time (Chapter 16), and use this table to predict everything it will move before you brew.</p>
+            <div style="overflow-x:auto">
+            <table class="cmp-table trend-table" id="map-variables">
+              <thead><tr><th scope="col">Knob</th><th scope="col">Processes it moves</th><th scope="col">How</th><th scope="col">Explained in</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Dose</th><td data-label="Processes it moves">Flow, diffusion</td><td data-label="How">More coffee at the same grind makes a deeper bed: more flow resistance, and more material for the water to extract from</td><td data-label="Explained in">Ch. 5 (bed), Ch. 13 (bed depth)</td></tr>
+                <tr><th scope="row">Grind</th><td data-label="Processes it moves">Diffusion, flow</td><td data-label="How">Finer means more surface area and a shorter diffusion path (faster extraction), but lower permeability (slower flow) and more fines to migrate</td><td data-label="Explained in">Ch. 4 (sizes), Ch. 2 (d²), Ch. 5 (permeability)</td></tr>
+                <tr><th scope="row">Water temperature</th><td data-label="Processes it moves">Heat, diffusion, chemistry, flow</td><td data-label="How">Hotter speeds diffusion (Arrhenius, about +7% per 5 °C (9 °F) near 93 °C (199 °F)), raises solubility, and thins the water so it flows more easily</td><td data-label="Explained in">Ch. 6 (rates, viscosity), Ch. 7 (solubility)</td></tr>
+                <tr><th scope="row">Ratio</th><td data-label="Processes it moves">Chemistry, sensory</td><td data-label="How">Water per gram of coffee sets the strength (TDS) a given extraction yield lands at; it does not, by itself, set how much extracts</td><td data-label="Explained in">Ch. 3 (the chart), Cheat Sheet</td></tr>
+                <tr><th scope="row">Time</th><td data-label="Processes it moves">Diffusion, flow</td><td data-label="How">Contact time is how long diffusion gets to run; in percolation it is set by the flow, not by a timer you control directly</td><td data-label="Explained in">Ch. 2 (kinetics), Ch. 5 (drawdown)</td></tr>
+                <tr><th scope="row">Pressure</th><td data-label="Processes it moves">Flow, chemistry</td><td data-label="How">The driving force in Darcy’s law: a few hundred pascals of gravity head in filter, 9 bar (131 psi) from a pump in espresso, where it also builds crema</td><td data-label="Explained in">Ch. 5 (gravity), Ch. 9 (pump), Ch. 11 (crema)</td></tr>
+                <tr><th scope="row">Geometry</th><td data-label="Processes it moves">Flow, diffusion</td><td data-label="How">Brewer shape sets the bed’s depth profile and exit restriction, so it sets where flow resistance is spent and which particles get the longest path</td><td data-label="Explained in">Ch. 13 (geometry), Ch. 14 (brewers)</td></tr>
+              </tbody>
+            </table>
+            </div>
+            <p class="chart-note">Directions of effect follow the guide’s stated models (Darcy, d² diffusion, Arrhenius with Ea ≈ 16 kJ/mol, Chapter 6). The temperature figure is the model’s value near 93 °C (199 °F), not a universal constant.</p>
+          </div>
+        </details>
+        <div class="narrow">
+          <p class="body-txt">Where to go next: the pipeline in slow motion is <a href="#flow">Flow (Chapter 5)</a> and <a href="#diffusion">Diffusion (Chapter 2)</a>; the meeting point is measured in <a href="#chart">The Chart (Chapter 3)</a>; the drivers are compared in <a href="#geometry">Geometry (Chapter 13)</a>; and the whole map is put to work in the <a href="#protocol">Protocols</a> and the <a href="#cheatsheet">Cheat Sheet</a>.</p>
         </div>
       </div>
     </section>
@@ -793,6 +1163,7 @@
           <div class="fold-body">
             <div class="narrow">
               <p class="lede">Gravity does the work. Water pooled above a bed of grounds percolates down through it (through a paper, cloth or metal filter) driven only by its own weight. Chapters 1–8 cover the processes that decide the cup: the bean, diffusion, measurement, grind, flow, heat, water and gas. Chapter 1 covers processing in one section of its own, the five ways a cherry becomes a green bean (washed, natural, honey, aerobic and anaerobic) compared side by side.</p>
+              <p class="body-txt">How these eight chapters join into one pipeline, feedbacks included, is drawn in <a href="#architecture">How everything fits together (Figures 47–50)</a>.</p>
               <p class="small">This drawer is Part 1's introduction, Chapters 1–8 follow below as their own dropdowns.</p>
               <p class="body-txt"><strong>If you brew immersion</strong> (French press, cupping, a steeped AeroPress): start with <a href="#diffusion">Diffusion (Chapter 2)</a>, <a href="#heat">Heat (Chapter 6)</a> and <a href="#senses">the cupping protocol (Chapter 21)</a>. The flow chapters assume water moving through a bed, which immersion never does; diffusion, temperature and tasting carry over unchanged.</p>
             </div>
@@ -1305,6 +1676,7 @@
               <div class="sub-body">
                 <ul class="clean">
                       <li>State the d² law and use it to compare extraction times for two particle sizes.</li>
+                      <li>Place diffusion in the whole system using the pipeline and interaction diagrams in <a href="#architecture">How everything fits together (Figures 48–49)</a>.</li>
                       <li>Explain the boundary layer, and why agitation speeds extraction without changing the particle.</li>
                       <li>Describe the order in which compound families leave the particle, and what that order tastes like.</li>
                       <li>Use the Péclet number to say whether flow or diffusion is doing the work in a given brew.</li>
@@ -1963,6 +2335,7 @@
               <div class="sub-body">
                 <ul class="clean">
                       <li>State Darcy's law and name every variable in it.</li>
+                      <li>Trace how flow feeds back into contact time and diffusion in the pipeline diagram, <a href="#architecture">Figure 48</a>.</li>
                       <li>Predict what grinding finer, or a deeper bed, does to flow and drawdown time.</li>
                       <li>Explain channeling as a permeability shortcut, in filter beds as in pucks.</li>
                       <li>Describe what a pour does besides add water: mixing, avalanches and bed disturbance.</li>
@@ -2105,6 +2478,7 @@
               <div class="sub-body">
                 <ul class="clean">
                       <li>Use the Arrhenius law to compare extraction rates at two temperatures.</li>
+                      <li>Say what temperature changes besides diffusion, using the feedback lines in <a href="#architecture">Figure 48</a> and the meeting point in <a href="#architecture">Figure 49</a>.</li>
                       <li>Follow the slurry's temperature through a brew with Newton's law of cooling.</li>
                       <li>Explain heat's second lever: viscosity falls as water heats, so flow speeds up too.</li>
                       <li>Say why kettle temperature is not slurry temperature, and what preheating buys.</li>
@@ -2238,6 +2612,7 @@
               <div class="sub-body">
                 <ul class="clean">
                       <li>Distinguish general hardness (GH) from alkalinity (KH), and say what each does in the cup.</li>
+                      <li>Place water chemistry among the five interacting processes in <a href="#architecture">Five processes, one meeting point (Figure 49)</a>.</li>
                       <li>Read the SCA water targets and place a given water inside or outside them.</li>
                       <li>Convert between drops on a test kit, mg/L as CaCO<sub>3</sub> and mmol/L without a calculator error.</li>
                       <li>Build a remineralised water to a target, and measure what you actually made.</li>
@@ -2584,6 +2959,7 @@
           <div class="fold-body">
             <div class="narrow">
               <p class="lede">The same physics, under pressure. Everything in Part 1 ran on gravity, a pressure drop of a few centimetres of water. Espresso replaces gravity with a pump at 9 bar (131 psi), roughly ninety metres (about 300 ft) of water column, and compresses three minutes of percolation into thirty seconds. The equations don't change. Their consequences do. And in Chapter 12 the shot meets its second foam (steamed milk) where bubble pressure, protein chemistry and pour momentum decide whether latte art is possible at all.</p>
+              <p class="body-txt">Espresso as the same pipeline with a pump for a driver is drawn in <a href="#architecture">One pipeline, three drivers (Figure 50)</a>.</p>
               <p class="small">This drawer is Part 2's introduction, Chapters 9–12 follow below as their own dropdowns.</p>
             </div>
             <figure class="fig">
@@ -3216,6 +3592,7 @@
           <div class="fold-body">
             <div class="narrow">
               <p class="lede">Parts 1 and 2 treated the coffee bed as if it floated in space, a porous medium with a permeability, a depth, a temperature. In a real brew the bed takes the shape of whatever holds it, and that shape is not neutral. A dripper decides how deep the bed is at every point, where the water is allowed to leave, and whether the exit restricts the flow or your hand does. Chapters 13–16 put the vessel itself into the equations: geometry first, then four real brewers, then what controlled measurements actually found, then an experiment you can run on your own counter.</p>
+              <p class="body-txt">Geometry as the pipeline’s boundary condition is drawn in <a href="#architecture">One pipeline, three drivers (Figure 50)</a>.</p>
               <p class="small">This drawer is Part 3's introduction, Chapters 13–16 follow below as their own dropdowns.</p>
             </div>
             <div class="stats-row">
@@ -3747,6 +4124,7 @@
           <div class="fold-body">
             <div class="narrow">
               <p class="lede">Parts 1–3 built the physics of the cup. Part 4 maps the knowledge itself: the scientific disciplines it draws on, the researchers and educators who produced it, the peer-reviewed library underneath it, and the engineering models and experimental method that tie it together, so you can tell, for anything in this guide, what kind of evidence it stands on.</p>
+              <p class="body-txt">Where the five processes meet, and how the guide itself is organised, is mapped in <a href="#architecture">How everything fits together (Figures 47–50)</a>.</p>
               <p class="small">This drawer is Part 4's introduction, Chapters 17–21 follow below as their own dropdowns.</p>
             </div>
             <div class="stats-row">
@@ -4290,6 +4668,7 @@
               <div class="sub-body">
                 <ul class="clean">
                       <li>Use the flavour wheel's families to name a note, starting wide and narrowing down.</li>
+                      <li>Explain why the senses sit downstream of the measured meeting point in <a href="#architecture">Figure 49</a>: numbers first, verdict second.</li>
                       <li>Explain orthonasal and retronasal aroma, and why most of 'taste' is smell.</li>
                       <li>Judge whether a TDS gap is worth arguing about, using relative change and the Frost comparison.</li>
                       <li>Run the standard cupping protocol and say what it removes, and why.</li>
@@ -4452,6 +4831,7 @@
           <div class="fold-body">
             <div class="narrow">
               <p class="body-txt">A recipe is just a set of initial conditions. Here are starting points for each method, with the physical reason attached to every step, so when a cup misses, you know which equation to argue with.</p>
+              <p class="body-txt">These protocols are the pipeline of <a href="#architecture">Figures 48–50</a> written as instructions: same stages, same drivers, one method per row.</p>
             </div>
             <div class="cols" style="margin-top:10px">
               <details class="card subfold" style="margin:0">
@@ -5733,7 +6113,12 @@
         {sel: 'svg[aria-label^="Flow diagram: aroma reaches"]', kind: 'svg', t: 'Two routes to flavour', ch: 'Chapter 21 · The senses', s: 'senses', d: 'Aroma reaches the nose directly by sniffing (orthonasal) and from the mouth, up behind the palate, while swallowing (retronasal); together with taste and texture, the brain reads them as flavour. Takeaway: most of what we call taste is smell, arriving by the back door.'},
         {sel: 'svg[aria-label^="Simplified coffee flavour wheel"]', kind: 'svg', t: 'The flavour wheel, simplified', ch: 'Chapter 21 · The senses', s: 'senses', f: 'The flavour wheel', d: 'Nine flavour families on a wheel, simplified from the SCA / World Coffee Research vocabulary of over a hundred descriptors. Takeaway: start at the family, then narrow to the note, a shared word is a claim another taster can check.'},
         {sel: 'svg[aria-label^="Sealed tank over time"]', kind: 'svg', t: 'The sealed tank over time, and the three set-ups', ch: 'Chapter 1 · The bean', s: 'bean', f: 'Anaerobic: the physics and chemistry', d: 'Inside an anaerobic tank across 192 hours: oxygen falls as the microbes use it, CO₂ rises to take over the gas, and pH falls (5.8 to 4.4 in the first 72 hours in one Brazilian tank). Below, the three sealed set-ups (SIAF tank with airlock, vacuum bag, CO₂-injected bag) beside the open tank. Takeaway: sealing the tank chooses which microbes, and therefore which acids, do the fermenting. Schematic curves, anchored to trial values.'},
-        {sel: 'svg[aria-label^="Five ways from cherry"]', kind: 'svg', t: 'Five ways from cherry to green bean', ch: 'Chapter 1 · The bean', s: 'bean', f: 'Five ways from cherry', d: 'The five processing methods side by side: washed, natural, honey, aerobic and anaerobic, compared on what stays on the seed, whether air can reach it, and how long the defining step takes. Takeaway: three methods are defined by what dries on the seed and two by the air around a fermentation, and every method ends at the same green bean, at about 10–12% moisture.'}
+        {sel: 'svg[aria-label^="Five ways from cherry"]', kind: 'svg', t: 'Five ways from cherry to green bean', ch: 'Chapter 1 · The bean', s: 'bean', f: 'Five ways from cherry', d: 'The five processing methods side by side: washed, natural, honey, aerobic and anaerobic, compared on what stays on the seed, whether air can reach it, and how long the defining step takes. Takeaway: three methods are defined by what dries on the seed and two by the air around a fermentation, and every method ends at the same green bean, at about 10–12% moisture.'},
+        {sel: 'svg[aria-label^="Guide architecture diagram"]', kind: 'svg', t: 'The guide, as a map', ch: 'Architecture · How everything fits together', s: 'architecture', d: 'The guide’s own architecture: the four parts in reading order (Filter, Espresso, Pour Over, The Science Behind It), the three reading paths (Start here, full read, search first), and the supporting sections underneath every chapter (Equations, Home Lab, Cheat Sheet, Terms and Assumptions, References and Figures & Tables). Takeaway: pick any path in; the supporting sections hold up all of them.'},
+        {sel: 'svg[aria-label^="Brew pipeline diagram with feedback"]', kind: 'svg', t: 'The brew pipeline, with its feedbacks', ch: 'Architecture · How everything fits together', s: 'architecture', d: 'The end-to-end brew pipeline: bean, grind, bed, water in, flow, diffusion, heat, chemistry, cup, with three feedback lines: flow sets contact time and contact time sets how far diffusion gets; grind changes surface area, permeability and fines migration at once; temperature speeds diffusion and changes solubility and viscosity. Takeaway: the pipeline is not one-way, which is why changing one variable moves several numbers. Schematic: arrows show influence, not measured rates.'},
+        {sel: 'svg[aria-label^="Interaction diagram: diffusion flow heat"]', kind: 'svg', t: 'Five processes, one meeting point', ch: 'Architecture · How everything fits together', s: 'architecture', d: 'Diffusion, flow, heat and chemistry, each with what it controls and what it depends on, meeting at extraction yield and TDS, the two numbers measured in the cup (Chapter 3), with the senses (Chapter 21) judging what the numbers cannot say. Takeaway: extraction yield and TDS are where the four physical processes become one measurement. Schematic of dependencies; the meeting point is measured, the arrows are the guide’s models.'},
+        {sel: 'svg[aria-label^="Method comparison diagram"]', kind: 'svg', t: 'One pipeline, three drivers', ch: 'Architecture · How everything fits together', s: 'architecture', d: 'Filter, espresso and pour over as the same pipeline with different drivers: gravity under a few centimetres of water head, a pump at 9 bar (131 psi), and gravity inside a brewer whose geometry is the boundary condition. Beds and strength windows differ (filter and pour over 1.15–1.45% TDS, espresso 7–12% TDS); diffusion, heat and chemistry do not. Takeaway: a method is a choice of driver and boundary condition, not a different physics.'},
+        {sel: 'svg[aria-label^="Supporting sections feed diagram"]', kind: 'svg', t: 'How the supporting sections feed each other', ch: 'Architecture · How everything fits together', s: 'architecture', d: 'The traffic between the guide’s parts: References support the chapters’ claims and Terms & Assumptions define and bound them; the chapters in turn feed the Equations index (their laws, collected), the Home Lab (which tests their claims, and whose tested numbers feed the Protocols), the Protocols (recipes derived from the chapters, using the calculators), the Cheat Sheet (the chapters condensed) and Figures & Tables (every visual, indexed). Takeaway: the chapters are the source; every supporting section is derived from them, tests them, or indexes them. Schematic of the guide’s structure.'}
       ];
       var TABLES = [
         {sel: '#crema .cmp-table', kind: 'table', t: 'Espresso vs. filter, side by side', ch: 'Chapter 11 · The foam', s: 'crema', f: 'Espresso vs. filter', d: 'The two methods compared row by row: driving force, grind, bed geometry, ratio and strength, contact time, temperature and failure modes. Takeaway: same physics, different decades, of pressure, of strength, and of time.'},
@@ -5741,7 +6126,10 @@
         {sel: '#cs-windows', kind: 'table', t: 'The windows, filter vs. espresso', ch: 'Cheat Sheet', s: 'cheatsheet', f: 'The windows', d: 'The target windows for both methods on one card: dose, ratio, grind, time, temperature, strength and extraction. Takeaway: if a number here surprises you, the chapter behind it is one search away.'},
         {sel: '#cs-diagnosis', kind: 'table', t: 'Read your two numbers', ch: 'Cheat Sheet', s: 'cheatsheet', f: 'Read your two numbers', d: 'A ten-second diagnosis: find your TDS and extraction yield, read what the pair means, and make the one move it names. Takeaway: diagnose the axis you are off before touching any variable.'},
         {sel: '#cs-moves', kind: 'table', t: 'Change one thing, watch what moves', ch: 'Cheat Sheet', s: 'cheatsheet', f: 'Change one thing', d: 'For each single change, grind finer or coarser, hotter or cooler, longer or shorter, tighter or looser ratio, what it does to flow and time, extraction and strength. Takeaway: predict the direction of a change before you make it, then check with a brew.'},
-        {sel: '#bean .cmp-table', kind: 'table', t: 'Five processes, side by side', ch: 'Chapter 1 · The bean', s: 'bean', f: 'Five processes, side by side', d: 'Washed, natural, honey, aerobic and anaerobic compared on the same rows: what stays on the bean while it dries or ferments, oxygen, typical time, drying time, water use where known, and typical cup character. Takeaway: the ranges overlap and method alone does not fix flavour; an anaerobic coffee is usually also a natural or a washed coffee underneath, and a washed coffee’s tank fermentation is the aerobic row.'}
+        {sel: '#bean .cmp-table', kind: 'table', t: 'Five processes, side by side', ch: 'Chapter 1 · The bean', s: 'bean', f: 'Five processes, side by side', d: 'Washed, natural, honey, aerobic and anaerobic compared on the same rows: what stays on the bean while it dries or ferments, oxygen, typical time, drying time, water use where known, and typical cup character. Takeaway: the ranges overlap and method alone does not fix flavour; an anaerobic coffee is usually also a natural or a washed coffee underneath, and a washed coffee’s tank fermentation is the aerobic row.'},
+        {sel: '#map-chapters', kind: 'table', t: 'Chapter-to-concept map: where each process lives', ch: 'Architecture · How everything fits together', s: 'architecture', f: 'Chapter-to-concept map', d: 'All 21 chapters mapped against the five processes (flow, diffusion, heat, chemistry, sensory) as Main home, Part, or absent, with the equations and tools each chapter carries. Takeaway: read down a column to find everywhere one idea reappears; read across a row to see what one chapter actually covers. A map of coverage, not a measurement.'},
+        {sel: '#map-methods', kind: 'table', t: 'Concept-to-method map: the same process, three methods', ch: 'Architecture · How everything fits together', s: 'architecture', f: 'Concept-to-method map', d: 'Each of the five processes as it shows up in filter, espresso and pour over: gravity head vs. 9 bar (131 psi) pump vs. gravity inside a geometry boundary; minutes vs. seconds on the same d² diffusion clock; filter strengths vs. espresso strengths at the same extraction window. Takeaway: same process in every column; the driver, geometry, timescale or strength is what changes.'},
+        {sel: '#map-variables', kind: 'table', t: 'Variable map: the knobs, what they move', ch: 'Architecture · How everything fits together', s: 'architecture', f: 'Variable map', d: 'The seven knobs a brewer controls (dose, grind, water temperature, ratio, time, pressure, geometry) mapped to the processes each one moves, how it moves them, and the chapters that explain them. Takeaway: every knob moves more than one process, so predict all of its effects before changing it, and change one at a time.'}
       ];
       var figBuilt = false;
       function resolveFig(e){
@@ -5949,6 +6337,8 @@
         {t: "Assumptions made, every model, stated", s: "assumptions", k: "assumptions models limits illustrative simplified breaks down accuracy constants"},
         {t: "References & further reading", s: "references", k: "references bibliography sources doi further reading"},
         {t: "Legal & disclaimer", s: "legal", k: "legal disclaimer copyright fair use attribution educational use no professional advice warranty affiliation endorsement safety"},
+        {t: "Architecture & flow diagrams, how everything fits together", s: "architecture", k: "architecture flow diagram system map pipeline feedback interaction method comparison guide structure reading paths figure 47 48 49 50"},
+        {t: "Mappings: chapter-to-concept, concept-to-method, variable map", s: "architecture", k: "mapping matrix chapters concepts processes where each idea lives knobs variables dose grind ratio pressure geometry table 7 8 9 figure 51 supporting sections feed"},
         {t: "Figures & Tables, every visual, one shelf", s: "figures", k: "figures tables index gallery all visuals diagrams charts captions figure table list browse"},
         {t: "Cheat sheet, the whole guide on one screen", s: "cheatsheet", k: "cheat sheet summary quick reference windows diagnosis one change trend table constants first move symptom"},
         {t: "Plot your brews, see the trend", s: "chart", f: "Plot your brews", k: "trend plot graph my brews drift plug in values tds extraction points line"},
