@@ -562,12 +562,19 @@
     </style>
 
         <style>
-      /* ---------- Experience level toggle (Beginner / Expert) ---------- */
-      .xp-toggle{display:flex; flex:none; align-items:center; gap:2px; border:1px solid var(--line); border-radius:999px; padding:2px; background:var(--bg)}
-      .xp-toggle button{appearance:none; border:0; background:transparent; color:var(--ink-2); font:inherit; font-size:13px; font-weight:600; padding:6px 12px; border-radius:999px; cursor:pointer; line-height:1.2; white-space:nowrap}
-      .xp-toggle button[aria-pressed="true"]{background:var(--accent); color:#fff}
-      .xp-toggle button:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
-      @media (max-width:640px){ .xp-toggle button{font-size:12px; padding:5px 9px} .xp-toggle .xp-long{display:none} }
+      /* ---------- Mode toggle: ONE control, four modes ---------- */
+      /* Beginner / Minimal / Technical / Expert are presets over the two
+         internal axes below (data-xp = language & tools, data-view = how
+         much content). One control, one saved choice: no competing toggles. */
+      .mode-toggle{display:flex; flex:none; align-items:center; gap:2px; border:1px solid var(--line); border-radius:999px; padding:2px; background:var(--bg)}
+      .mode-toggle button{appearance:none; border:0; background:transparent; color:var(--ink-2); font:inherit; font-size:13px; font-weight:600; padding:6px 11px; border-radius:999px; cursor:pointer; line-height:1.2; white-space:nowrap; min-height:32px}
+      .mode-toggle button[aria-pressed="true"]{background:var(--accent); color:#fff}
+      .mode-toggle button:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+      .toggle-cap{font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-3); padding:0 2px 0 8px; white-space:nowrap}
+      @media (max-width:900px){ .toggle-cap{display:none} }
+      /* Technical shows the full guide without the Expert console and tools panels */
+      body[data-mode="technical"] #xp-tools,
+      body[data-mode="technical"] #xp-console{display:none}
 
       /* mode visibility */
       .xp-beginner-only{display:none}
@@ -712,13 +719,18 @@
       /* Independent of Beginner / Expert: that toggle sets language and
          guidance, this one sets how much content is shown. Technical is the
          full guide exactly as written; Minimal is a condensed view. */
-      .view-toggle{display:flex; flex:none; align-items:center; gap:2px; border:1px solid var(--line); border-radius:999px; padding:2px; background:var(--bg)}
-      .view-toggle button{appearance:none; border:0; background:transparent; color:var(--ink-2); font:inherit; font-size:13px; font-weight:600; padding:6px 12px; border-radius:999px; cursor:pointer; line-height:1.2; white-space:nowrap}
-      .view-toggle button[aria-pressed="true"]{background:var(--accent); color:#fff}
-      .view-toggle button:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
-      .toggle-cap{font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-3); padding:0 2px 0 8px; white-space:nowrap}
-      @media (max-width:900px){ .toggle-cap{display:none} }
-      @media (max-width:640px){ .view-toggle button{font-size:12px; padding:5px 9px} }
+      /* Technical mode also hides the Expert quick-access sidebar */
+      @media (min-width:1340px){ body[data-mode="technical"] #xp-sidebar{display:none} }
+      /* The single Mode control gets its own full row on phone and tablet:
+         it never squeezes beside the title, clips off screen, or traps the
+         theme button underneath it. Anchored headings clear the taller bar. */
+      @media (max-width:1099px){
+        .nav-in{flex-wrap:wrap; row-gap:4px}
+        .mode-toggle{order:5; flex:1 1 100%; margin:2px 0 4px}
+        .mode-toggle button{flex:1 1 0; padding:9px 2px; font-size:13.5px; min-height:40px}
+        section{scroll-margin-top:136px}
+        details.fold, details.subfold{scroll-margin-top:136px}
+      }
 
       /* visibility helpers */
       .view-minimal-only{display:none}
@@ -827,11 +839,11 @@
       body.view-switching main, body.view-switching section.band{animation:xpFade .35s ease}
       @media (prefers-reduced-motion: reduce){ body.view-switching main, body.view-switching section.band{animation:none} }
       @media (max-width:640px){ .nav-in{flex-wrap:wrap; row-gap:2px; column-gap:10px} }
-      @media print{ .view-toggle{display:none} }
+      @media print{ .mode-toggle{display:none} }
     </style>
 
   </head>
-  <body>
+  <body data-mode="technical" data-xp="expert" data-view="technical">
 
     <div id="progress" aria-hidden="true"></div>
     <nav class="nav">
@@ -880,15 +892,12 @@
           <a href="#legal">Legal</a>
           <a href="#figures">Figures &amp; Tables</a>
         </div>
-        <div class="xp-toggle" role="group" aria-label="Experience level">
-          <span class="toggle-cap" aria-hidden="true">Level</span>
-          <button type="button" id="xp-btn-beginner" aria-pressed="false">Beginner</button>
-          <button type="button" id="xp-btn-expert" aria-pressed="true">Expert<span class="xp-long"> mode</span></button>
-        </div>
-        <div class="view-toggle" role="group" aria-label="Content length">
-          <span class="toggle-cap" aria-hidden="true">Length</span>
-          <button type="button" id="view-btn-minimal" aria-pressed="false" title="Condensed view: the essentials only, much less content">Minimal</button>
-          <button type="button" id="view-btn-technical" aria-pressed="true" title="Full view: every chapter, chart, equation and table">Technical</button>
+        <div class="mode-toggle" role="group" aria-label="Guide mode">
+          <span class="toggle-cap" aria-hidden="true">Mode</span>
+          <button type="button" data-mode-btn="beginner" aria-pressed="false" title="Guided and simplified: plain language, wizard, presets and checklists">Beginner</button>
+          <button type="button" data-mode-btn="minimal" aria-pressed="false" title="Condensed: the essentials only, much less content">Minimal</button>
+          <button type="button" data-mode-btn="technical" aria-pressed="true" title="All the data: every chapter, chart, equation and table">Technical</button>
+          <button type="button" data-mode-btn="expert" aria-pressed="false" title="Dense and customisable: expert console, sidebar, raw data and export tools">Expert</button>
         </div>
         <button class="theme-btn" id="theme-toggle" type="button" aria-label="Switch between light and dark mode" title="Light / dark mode">
           <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 14.2A8.5 8.5 0 1 1 9.8 3.4a7 7 0 0 0 10.8 10.8z"/></svg>
@@ -920,7 +929,7 @@
     <div class="wrap">
       <div class="view-panel view-minimal-only" id="view-minimal-home">
         <h2>The condensed guide</h2>
-        <p class="body-txt" style="margin:0">You are in <strong>Minimal</strong> view: the essentials only. Each chapter below is cut to its opening summary and key numbers, and the deep material (Home Lab, equations, worked examples, charts, the research library, references and the figures index) is hidden. Switch to <strong>Technical</strong> in the top bar for all the data. Minimal and Technical are independent of Beginner / Expert, which sets the language: any combination works.</p>
+        <p class="body-txt" style="margin:0">You are in <strong>Minimal</strong> view: the essentials only. Each chapter below is cut to its opening summary and key numbers, and the deep material (Home Lab, equations, worked examples, charts, the research library, references and the figures index) is hidden. Switch to <strong>Technical</strong> with the Mode control in the top bar for all the data.</p>
         <h3>The recipe that starts everything</h3>
         <div class="view-essentials">
           <div><b>20 g / 320 g</b><span>coffee / water (1:16)</span></div>
@@ -989,7 +998,7 @@
           <a class="xp-tool-btn" href="#equations" style="text-decoration:none">Equations index</a>
           <a class="xp-tool-btn" href="#assumptions" style="text-decoration:none">All assumptions</a>
         </div>
-        <p class="body-txt" style="margin:12px 0 0">Keyboard shortcuts: <kbd>Alt</kbd> + <kbd>B</kbd> Beginner mode, <kbd>Alt</kbd> + <kbd>E</kbd> Expert mode. Content length is a separate toggle: <kbd>Alt</kbd> + <kbd>M</kbd> Minimal (condensed), <kbd>Alt</kbd> + <kbd>T</kbd> Technical (all the data). Your choices are remembered on this device.</p>
+        <p class="body-txt" style="margin:12px 0 0">One Mode control in the top bar switches the whole guide. Keyboard shortcuts: <kbd>Alt</kbd> + <kbd>B</kbd> Beginner, <kbd>Alt</kbd> + <kbd>M</kbd> Minimal (condensed), <kbd>Alt</kbd> + <kbd>T</kbd> Technical (all the data), <kbd>Alt</kbd> + <kbd>E</kbd> Expert. Your choice is remembered on this device.</p>
       </div>
     </div>
 
@@ -1137,7 +1146,7 @@
       </div>
     </aside>
 
-    <button type="button" id="xp-chip" aria-label="Current experience level. Activate to switch mode.">Mode: <span class="xp-chip-mode" id="xp-chip-mode">Expert</span> · switch</button>
+    <button type="button" id="xp-chip" aria-label="Current guide mode. Activate to switch to the next mode.">Mode: <span class="xp-chip-mode" id="xp-chip-mode">Technical</span> · switch</button>
     <div id="xp-tip" role="tooltip"></div>
     <div id="xp-backdrop"></div>
     <span id="xp-status" role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap"></span>
@@ -4425,15 +4434,14 @@
     <div id="xp-welcome" role="dialog" aria-modal="false" aria-labelledby="xp-welcome-h">
       <button type="button" id="xp-welcome-close" aria-label="Dismiss and keep the full guide">×</button>
       <h2 id="xp-welcome-h">How would you like to read this guide?</h2>
-      <p>Pick a starting mode. You can switch at any time with the toggles in the top bar, and the guide remembers your choices on this device. There are two separate choices: <strong>Level</strong> (Beginner / Expert) sets the language, and <strong>Length</strong> (Minimal / Technical) sets how much content is shown.</p>
+      <p>Pick a starting mode. There is one Mode control in the top bar: switch at any time, with no reload, and the guide remembers your choice on this device.</p>
       <div class="xp-tools-row">
-        <button type="button" class="xp-tool-btn xp-pick" data-xp-pick="beginner">Beginner<small>Plain language, guided steps, presets, advanced sections tucked away</small></button>
-        <button type="button" class="xp-tool-btn xp-pick" data-xp-pick="expert">Expert<small>The full guide: dense tables, raw constants, equations and export tools</small></button>
+        <button type="button" class="xp-tool-btn xp-pick" data-mode-pick="beginner">Beginner<small>Guided and simplified: plain language, guided steps, presets, advanced sections tucked away</small></button>
+        <button type="button" class="xp-tool-btn xp-pick" data-mode-pick="minimal">Minimal<small>Condensed: chapter summaries, key numbers, cheat sheet and protocols only, much less content</small></button>
       </div>
-      <p style="margin:16px 0 8px"><strong>How much content?</strong> Pick a length too; it applies straight away and can be changed any time with the Minimal / Technical toggle in the top bar.</p>
-      <div class="xp-tools-row">
-        <button type="button" class="xp-tool-btn xp-pick" data-view-pick="minimal" aria-pressed="false">Minimal<small>Condensed: chapter summaries, key numbers, cheat sheet and protocols only</small></button>
-        <button type="button" class="xp-tool-btn xp-pick" data-view-pick="technical" aria-pressed="true">Technical<small>All the data: every chapter, chart, equation, table and reference</small></button>
+      <div class="xp-tools-row" style="margin-top:10px">
+        <button type="button" class="xp-tool-btn xp-pick" data-mode-pick="technical">Technical<small>All the data: every chapter, chart, equation, table and reference</small></button>
+        <button type="button" class="xp-tool-btn xp-pick" data-mode-pick="expert">Expert<small>Dense and customisable: the full guide plus console, sidebar, raw constants and export tools</small></button>
       </div>
     </div>
     <button id="to-top" type="button" aria-label="Back to the top of the guide" title="Back to top">
@@ -5357,9 +5365,26 @@
         <script>
     (function(){
       "use strict";
-      var KEY = "poc-xp-mode";
+      /* ---------- one mode control: four modes, one saved choice ---------- */
+      var KEY = "poc-mode";
+      var MODES = {
+        beginner:  { xp: "beginner", view: "technical", label: "Beginner",  status: "Beginner mode on. Plain language, guided wizard, presets and checklists shown; equations, dense tables and advanced settings hidden." },
+        minimal:   { xp: "expert",   view: "minimal",   label: "Minimal",   status: "Minimal mode on. Condensed guide: chapter summaries, key numbers, cheat sheet, calculator and protocols only." },
+        technical: { xp: "expert",   view: "technical", label: "Technical", status: "Technical mode on. The full guide: every chapter, chart, equation, table and reference." },
+        expert:    { xp: "expert",   view: "technical", label: "Expert",    status: "Expert mode on. Full technical text, dense tables, expert console and sidebar shown." }
+      };
+      var ORDER = ["beginner", "minimal", "technical", "expert"];
       var stored = null;
       try { stored = window.localStorage.getItem(KEY); } catch (e) { stored = null; }
+      if (!MODES[stored]) {
+        /* Migrate the old two-toggle choices (poc-xp-mode / poc-view-mode) */
+        var oldXp = null, oldView = null;
+        try { oldXp = window.localStorage.getItem("poc-xp-mode"); oldView = window.localStorage.getItem("poc-view-mode"); } catch (e) {}
+        if (oldXp === "beginner") stored = "beginner";
+        else if (oldView === "minimal") stored = "minimal";
+        else if (oldXp === "expert" && oldView === "technical") stored = "expert";
+        else stored = null;
+      }
       var body = document.body;
 
       /* ---------- plain-language swaps ---------- */
@@ -5489,35 +5514,49 @@
         for (var k = 0; k < terms.length; k++) if (tipFor(terms[k])) terms[k].setAttribute("tabindex", "0");
       })();
 
-      /* ---------- apply mode ---------- */
-      var btnB = document.getElementById("xp-btn-beginner");
-      var btnE = document.getElementById("xp-btn-expert");
+      /* ---------- apply mode (the single Mode control) ---------- */
+      var modeBtns = document.querySelectorAll("[data-mode-btn]");
       var welcome = document.getElementById("xp-welcome");
       var backdrop = document.getElementById("xp-backdrop");
       var chipMode = document.getElementById("xp-chip-mode");
       var status = document.getElementById("xp-status");
+      var viewStatus = document.getElementById("view-status");
       function hideWelcome(){ if (welcome) welcome.classList.remove("show"); if (backdrop) backdrop.classList.remove("show"); }
       function apply(mode, save){
-        if (mode !== "beginner") mode = "expert";
-        body.setAttribute("data-xp", mode);
-        if (btnB) btnB.setAttribute("aria-pressed", mode === "beginner" ? "true" : "false");
-        if (btnE) btnE.setAttribute("aria-pressed", mode === "expert" ? "true" : "false");
-        if (chipMode) chipMode.textContent = mode === "beginner" ? "Beginner" : "Expert";
-        if (status) status.textContent = mode === "beginner"
-          ? "Beginner mode on. Plain language, guided wizard, presets and checklists shown; equations, dense tables and advanced settings hidden."
-          : "Expert mode on. Full technical text, dense tables, expert console and sidebar shown.";
-        applySwaps(mode);
-        if (mode !== "beginner") hideTip();
-        if (save) { try { window.localStorage.setItem(KEY, mode); } catch (e) {} }
+        if (!MODES[mode]) mode = "technical";
+        var m = MODES[mode];
+        body.setAttribute("data-mode", mode);
+        body.setAttribute("data-xp", m.xp);
+        body.setAttribute("data-view", m.view);
+        for (var i = 0; i < modeBtns.length; i++) modeBtns[i].setAttribute("aria-pressed", modeBtns[i].getAttribute("data-mode-btn") === mode ? "true" : "false");
+        if (welcome) {
+          var picks = welcome.querySelectorAll("[data-mode-pick]");
+          for (var p = 0; p < picks.length; p++) picks[p].setAttribute("aria-pressed", picks[p].getAttribute("data-mode-pick") === mode ? "true" : "false");
+        }
+        if (chipMode) chipMode.textContent = m.label;
+        if (status) status.textContent = m.status;
+        if (viewStatus) viewStatus.textContent = m.status;
+        applySwaps(m.xp);
+        if (m.xp !== "beginner") hideTip();
+        if (save) {
+          try { window.localStorage.setItem(KEY, mode); } catch (e) {}
+          try { window.localStorage.setItem("poc-xp-mode", m.xp); window.localStorage.setItem("poc-view-mode", m.view); } catch (e) {}
+        }
         body.classList.add("xp-switching");
-        window.setTimeout(function(){ body.classList.remove("xp-switching"); }, 380);
+        body.classList.add("view-switching");
+        window.setTimeout(function(){ body.classList.remove("xp-switching"); body.classList.remove("view-switching"); }, 380);
         hideWelcome();
         updateRaw();
       }
-      if (btnB) btnB.addEventListener("click", function(){ apply("beginner", true); });
-      if (btnE) btnE.addEventListener("click", function(){ apply("expert", true); });
+      for (var mb = 0; mb < modeBtns.length; mb++){
+        modeBtns[mb].addEventListener("click", function(){ apply(this.getAttribute("data-mode-btn"), true); });
+      }
+      window.pocSetMode = apply;
       var chip = document.getElementById("xp-chip");
-      if (chip) chip.addEventListener("click", function(){ apply(body.getAttribute("data-xp") === "beginner" ? "expert" : "beginner", true); });
+      if (chip) chip.addEventListener("click", function(){
+        var cur = ORDER.indexOf(body.getAttribute("data-mode"));
+        apply(ORDER[(cur + 1) % ORDER.length], true);
+      });
       function setAllFolds(open){
         var folds = document.querySelectorAll("details.fold, details.subfold");
         for (var i = 0; i < folds.length; i++) folds[i].open = open;
@@ -5526,6 +5565,8 @@
         if (!ev.altKey) return;
         var k = (ev.key || "").toLowerCase();
         if (k === "b") { ev.preventDefault(); apply("beginner", true); }
+        else if (k === "m") { ev.preventDefault(); apply("minimal", true); }
+        else if (k === "t") { ev.preventDefault(); apply("technical", true); }
         else if (k === "e") { ev.preventDefault(); apply("expert", true); }
         else if (k === "o") { ev.preventDefault(); setAllFolds(true); }
         else if (k === "c") { ev.preventDefault(); setAllFolds(false); }
@@ -5758,23 +5799,26 @@
       wzStep(1);
 
       /* ---------- first visit / restore ---------- */
-      if (stored === "beginner" || stored === "expert") {
+      if (MODES[stored]) {
         apply(stored, false);
       } else {
-        apply("expert", false);
+        apply("technical", false);
         if (welcome) {
           welcome.classList.add("show");
           if (backdrop) backdrop.classList.add("show");
-          var picks = welcome.querySelectorAll("[data-xp-pick]");
+          var picks = welcome.querySelectorAll("[data-mode-pick]");
           for (var i = 0; i < picks.length; i++){
-            picks[i].addEventListener("click", function(){ apply(this.getAttribute("data-xp-pick"), true); });
+            picks[i].addEventListener("click", function(){ apply(this.getAttribute("data-mode-pick"), true); });
           }
           var close = document.getElementById("xp-welcome-close");
-          if (close) close.addEventListener("click", function(){ apply("expert", true); });
-          if (backdrop) backdrop.addEventListener("click", function(){ apply("expert", true); });
-          document.addEventListener("keydown", function(ev){ if (ev.key === "Escape" && welcome.classList.contains("show")) apply("expert", true); });
+          if (close) close.addEventListener("click", function(){ apply("technical", true); });
+          if (backdrop) backdrop.addEventListener("click", function(){ apply("technical", true); });
+          document.addEventListener("keydown", function(ev){ if (ev.key === "Escape" && welcome.classList.contains("show")) apply("technical", true); });
         }
       }
+      /* The condensed panel's escape hatch uses the same single control */
+      var toTech = document.getElementById("view-to-technical");
+      if (toTech) toTech.addEventListener("click", function(){ apply("technical", true); window.scrollTo({ top: 0, behavior: "smooth" }); });
       updateRaw();
     })();
     </script>
@@ -5802,37 +5846,11 @@
         }
       }
 
-      var btnMin = document.getElementById("view-btn-minimal");
-      var btnTech = document.getElementById("view-btn-technical");
-      var status = document.getElementById("view-status");
-      var picks = document.querySelectorAll("[data-view-pick]");
-      function applyView(mode, save){
-        if (mode !== "minimal") mode = "technical";
-        body.setAttribute("data-view", mode);
-        if (btnMin) btnMin.setAttribute("aria-pressed", mode === "minimal" ? "true" : "false");
-        if (btnTech) btnTech.setAttribute("aria-pressed", mode === "technical" ? "true" : "false");
-        for (var j = 0; j < picks.length; j++) picks[j].setAttribute("aria-pressed", picks[j].getAttribute("data-view-pick") === mode ? "true" : "false");
-        if (status) status.textContent = mode === "minimal"
-          ? "Minimal view on. Condensed guide: chapter summaries, key numbers, cheat sheet, calculator and protocols only."
-          : "Technical view on. The full guide: every chapter, chart, equation, table and reference.";
-        if (save) { try { window.localStorage.setItem(KEY, mode); } catch (e) {} }
-        body.classList.add("view-switching");
-        window.setTimeout(function(){ body.classList.remove("view-switching"); }, 380);
-      }
-      if (btnMin) btnMin.addEventListener("click", function(){ applyView("minimal", true); });
-      if (btnTech) btnTech.addEventListener("click", function(){ applyView("technical", true); });
-      var toTech = document.getElementById("view-to-technical");
-      if (toTech) toTech.addEventListener("click", function(){ applyView("technical", true); window.scrollTo({ top: 0, behavior: "smooth" }); });
-      for (var k = 0; k < picks.length; k++){
-        picks[k].addEventListener("click", function(){ applyView(this.getAttribute("data-view-pick"), true); });
-      }
-      document.addEventListener("keydown", function(ev){
-        if (!ev.altKey) return;
-        var key = (ev.key || "").toLowerCase();
-        if (key === "m") { ev.preventDefault(); applyView("minimal", true); }
-        else if (key === "t") { ev.preventDefault(); applyView("technical", true); }
-      });
-      applyView(stored === "minimal" ? "minimal" : "technical", false);
+      /* Mode switching lives in the unified Mode control script above
+         (window.pocSetMode): the one control sets data-xp and data-view
+         together and owns the nav buttons, welcome picks, keyboard
+         shortcuts and the saved choice. This script only adds the
+         Minimal chapter notes (the .view-minimal-only elements above). */
     })();
     </script>
 
