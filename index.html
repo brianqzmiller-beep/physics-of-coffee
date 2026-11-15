@@ -578,7 +578,7 @@
           <a href="#map">Guide Map</a>
           <a href="#filter">Part 1 · Filter</a>
           <a href="#bean">Bean</a>
-          <a href="#bean">Anaerobic</a>
+          <a href="#bean">Processing</a>
           <a href="#diffusion">Diffusion</a>
           <a href="#chart">The Chart</a>
           <a href="#chart">Calculator</a>
@@ -676,8 +676,8 @@
           <a class="map-card" href="#filter">
             <p class="mc-part">Part 1 · Chapters 1–8 · ~45 min</p>
             <h3>Filter</h3>
-            <p>Gravity brewing, process by process, the bean (including anaerobic processing, the sealed-tank fermentation at the end of Chapter 1), diffusion, measurement, grind, flow, heat, water and gas.</p>
-            <span class="mc-links">Bean · Anaerobic processing (in Ch. 1) · Diffusion · The Chart · Grind · Flow · Heat · Water · Bloom</span>
+            <p>Gravity brewing, process by process, the bean (including processing, the five ways a cherry becomes a green bean, compared side by side in Chapter 1), diffusion, measurement, grind, flow, heat, water and gas.</p>
+            <span class="mc-links">Bean · Processing (in Ch. 1) · Diffusion · The Chart · Grind · Flow · Heat · Water · Bloom</span>
           </a>
           <a class="map-card" href="#espresso">
             <p class="mc-part">Part 2 · Chapters 9–12 · ~30 min</p>
@@ -776,7 +776,7 @@
           </summary>
           <div class="fold-body">
             <div class="narrow">
-              <p class="lede">Gravity does the work. Water pooled above a bed of grounds percolates down through it (through a paper, cloth or metal filter) driven only by its own weight. Chapters 1–8 cover the processes that decide the cup: the bean, diffusion, measurement, grind, flow, heat, water and gas. Chapter 1 ends with a full section on anaerobic processing, fermentation in a sealed tank, where processing is covered.</p>
+              <p class="lede">Gravity does the work. Water pooled above a bed of grounds percolates down through it (through a paper, cloth or metal filter) driven only by its own weight. Chapters 1–8 cover the processes that decide the cup: the bean, diffusion, measurement, grind, flow, heat, water and gas. Chapter 1 covers processing in one section of its own, the five ways a cherry becomes a green bean (washed, natural, honey, aerobic and anaerobic) compared side by side.</p>
               <p class="small">This drawer is Part 1's introduction, Chapters 1–8 follow below as their own dropdowns.</p>
               <p class="body-txt"><strong>If you brew immersion</strong> (French press, cupping, a steeped AeroPress): start with <a href="#diffusion">Diffusion (Chapter 2)</a>, <a href="#heat">Heat (Chapter 6)</a> and <a href="#senses">the cupping protocol (Chapter 21)</a>. The flow chapters assume water moving through a bed, which immersion never does; diffusion, temperature and tasting carry over unchanged.</p>
             </div>
@@ -865,42 +865,247 @@
                 <ul class="clean">
                   <li><b>Origin is chemistry before it is geography.</b> Altitude, soil and climate set the green bean's density and its stock of sugars, acids and lipids. High-grown beans are typically denser, harder, slower to take heat in the roaster, and often slower to give up their solubles in the brewer.</li>
                   <li><b>Variety changes the raw recipe.</b> Arabica carries more lipids and sugars and roughly half the caffeine of robusta; robusta brings more chlorogenic acids, more bitterness, and, under pressure, more of the compounds that stabilise crema (Chapter 11). Varieties within arabica differ in bean size and density, which is part of why one coffee grinds differently from another at the same setting.</li>
-                  <li><b>Processing rewrites the surface.</b> Washed coffees have their fruit removed before drying, a cleaner, brighter starting chemistry. Natural (dry) processing ferments sugars in contact with the seed, adding fruity, winey compounds the water will later extract. Honey processes sit between. None of this changes the physics of Chapters 2–8; it changes <em>what the physics has to work with</em>.</li>
+                  <li><b>Processing rewrites the surface.</b> Washed coffees have their fruit removed before drying, a cleaner, brighter starting chemistry. Natural (dry) processing ferments sugars in contact with the seed, adding fruity, winey compounds the water will later extract. Honey processes sit between, aerobic fermentation is the open-tank baseline inside the washed method, and anaerobic processing seals the tank. The full comparison is the next section of this chapter, “Processing: how the cherry becomes a green bean”. None of this changes the physics of Chapters 2–8; it changes <em>what the physics has to work with</em>.</li>
                   <li><b>Density is the thread.</b> Origin, variety and roast all express themselves partly through one physical variable (how dense and porous the particle is) which feeds straight into diffusion distance, fracture behaviour and degassing rate. When a new coffee behaves strangely, density is a good first suspect.</li>
                 </ul>
               </div>
             </details>
+                        <div class="narrow">
+              <h3 style="margin-top:44px">Processing: how the cherry becomes a green bean</h3>
+              <p class="body-txt">Before any roasting, the seed has to come out of the cherry, and how that is done sets the chemistry the roast and the brew will work with. There are five ways worth comparing, and this section gives each of them the same space and the same structure: what happens step by step, the physics and chemistry underneath, the flavour it tends to produce, and where it can go wrong. Three of them (washed, natural and honey) are defined by what stays on the seed while it dries. The other two (aerobic and anaerobic) are defined by the air around a fermentation: open to the air, or sealed away from it. The two families overlap in practice: an anaerobic coffee still has to be dried afterwards, usually as a natural or a washed coffee, and the fermentation inside a classic washed coffee is an aerobic one. The numbers come from the sources in References [21] to [33]; where two sources give different figures, the text says so and names both.</p>
+            </div>
+            <details class="chart-card subfold">
+              <summary><span class="chart-title">Five ways from cherry to green bean (Diagram)</span></summary>
+              <div class="sub-body">
+                <p class="chart-sub">The five methods side by side: what stays on the seed, whether air can reach it, and how long the defining step takes. Every method ends the same way, dried to about 10 to 12 percent moisture and hulled.</p>
+                <svg viewBox="0 0 720 356" role="img" aria-label="Five ways from cherry to green bean: washed, natural, honey, aerobic and anaerobic compared on what stays on the seed, oxygen, and typical time">
+                  <g font-size="15" font-weight="700" style="fill:var(--ink)" text-anchor="middle">
+                    <text x="76" y="34">Washed</text>
+                    <text x="220" y="34">Natural</text>
+                    <text x="364" y="34">Honey</text>
+                    <text x="508" y="34">Aerobic</text>
+                    <text x="652" y="34">Anaerobic</text>
+                  </g>
+                  <g>
+                    <circle cx="76" cy="66" r="17" fill="#a63d2a"/><circle cx="220" cy="66" r="17" fill="#a63d2a"/><circle cx="364" cy="66" r="17" fill="#a63d2a"/><circle cx="508" cy="66" r="17" fill="#a63d2a"/><circle cx="652" cy="66" r="17" fill="#a63d2a"/>
+                  </g>
+                  <g stroke="#b35c12" stroke-width="2.5">
+                    <path d="M76 86 L76 106"/><path d="M220 86 L220 106"/><path d="M364 86 L364 106"/><path d="M508 86 L508 106"/><path d="M652 86 L652 106"/>
+                    <path d="M70 100 L76 108 L82 100"/><path d="M214 100 L220 108 L226 100"/><path d="M358 100 L364 108 L370 100"/><path d="M502 100 L508 108 L514 100"/><path d="M646 100 L652 108 L658 100"/>
+                  </g>
+                  <g font-size="12" style="fill:var(--ink-2)" text-anchor="middle">
+                    <text x="76" y="130">fruit removed,</text>
+                    <text x="76" y="148">mucilage fermented</text>
+                    <text x="76" y="166">then washed off</text>
+                    <text x="220" y="130">whole cherry</text>
+                    <text x="220" y="148">dried intact,</text>
+                    <text x="220" y="166">nothing removed</text>
+                    <text x="364" y="130">skin and pulp off,</text>
+                    <text x="364" y="148">mucilage partly</text>
+                    <text x="364" y="166">left on to dry</text>
+                    <text x="508" y="130">pulped coffee in an</text>
+                    <text x="508" y="148">open tank,</text>
+                    <text x="508" y="166">air circulates</text>
+                    <text x="652" y="130">cherries or pulped</text>
+                    <text x="652" y="148">coffee in a</text>
+                    <text x="652" y="166">sealed tank</text>
+                  </g>
+                  <g font-size="12.5" font-weight="600" style="fill:var(--ink)" text-anchor="middle">
+                    <text x="76" y="206">Air: open</text>
+                    <text x="220" y="206">Air: open</text>
+                    <text x="364" y="206">Air: open</text>
+                    <text x="508" y="206">Air: open</text>
+                    <text x="652" y="206">Air: sealed out</text>
+                    <text x="76" y="232">Ferment 12–36 h</text>
+                    <text x="220" y="232">Dries 15–30 days</text>
+                    <text x="364" y="232">Dries 12–30 days</text>
+                    <text x="508" y="232">Ferment 12–36 h</text>
+                    <text x="652" y="232">Sealed 24–192 h</text>
+                    <text x="76" y="258">Dries 7–15 days</text>
+                    <text x="220" y="258">then hulled</text>
+                    <text x="364" y="258">no tank, no wash</text>
+                    <text x="508" y="258">then washed, dried</text>
+                    <text x="652" y="258">then dried as usual</text>
+                  </g>
+                  <g stroke="#b35c12" stroke-width="2.5">
+                    <path d="M76 272 L76 292"/><path d="M220 272 L220 292"/><path d="M364 272 L364 292"/><path d="M508 272 L508 292"/><path d="M652 272 L652 292"/>
+                    <path d="M70 286 L76 294 L82 286"/><path d="M214 286 L220 294 L226 286"/><path d="M358 286 L364 294 L370 286"/><path d="M502 286 L508 294 L514 286"/><path d="M646 286 L652 294 L658 286"/>
+                  </g>
+                  <rect x="196" y="300" width="328" height="34" rx="17" style="fill:var(--band)" stroke="#b35c12" stroke-width="1.5"/>
+                  <text x="360" y="322" font-size="13.5" font-weight="600" style="fill:var(--ink)" text-anchor="middle">Green bean, at about 10–12% moisture</text>
+                </svg>
+                <p class="chart-note">Schematic summary of the five subsections below; the times are the ranges those subsections cite, and the full comparison, with water use and cup profile, is in the table at the end of this section.</p>
+              </div>
+            </details>
+            <!-- METHOD: Washed -->
             <div class="narrow">
-              <h3 style="margin-top:44px">Anaerobic processing: fermentation in a sealed tank</h3>
-              <p class="body-txt">Processing has a newer branch, and it is the one most likely to be printed on a bag today: <em class="term">anaerobic</em> processing, fermentation carried out in a sealed vessel with the air kept out. It sits alongside washed, natural and honey rather than replacing them, because the coffee still has to be dried afterwards, usually as a natural or a washed coffee. This section takes it in the guide's usual order: what the word means, what goes into the tank, the physics and chemistry inside it, what the measurements show, who is doing the fermenting, what it tastes like, and where it can go wrong. The numbers come from the trials in References [21] to [25]; where a value is a range across trials, the text says so.</p>
+              <h4 style="margin-top:34px">Washed</h4>
             </div>
             <details class="card subfold">
-              <summary><span class="sum-h3">Anaerobic processing: what “anaerobic” means here</span></summary>
+              <summary><span class="sum-h3">Washed: what happens, step by step</span></summary>
               <div class="sub-body">
-                <p class="body-txt">Anaerobic means “without oxygen”. In the coffee sense it means something more practical: a sealed vessel that keeps outside air away from the fermenting coffee. In practice the tank is low in oxygen, not perfectly free of it. The coffee, its juices and its microbes carry some oxygen in with them, and no farm seal is perfect. What the seal changes is the supply: no fresh air arrives, so whatever oxygen starts inside gets used up and is not replaced. Three set-ups do this, and they are not the same process wearing different names:</p>
-                <ul class="clean">
-                  <li><b>1 · Self-induced anaerobic fermentation (SIAF).</b> Coffee is closed in a tank or bucket, and the microbes do the sealing work themselves: they use up the oxygen inside, carbon dioxide (CO<sub>2</sub>) builds up in its place, and an <a class="gloss" href="#glossary">airlock</a> in the lid lets CO<sub>2</sub> out while stopping air coming in. The tank becomes anaerobic by its own activity, which is what “self-induced” means.</li>
-                  <li><b>2 · Vacuum.</b> Coffee goes into sealed bags and the air is drawn out with a vacuum pump before fermentation starts, so the low-oxygen conditions are set by machine rather than by the microbes.</li>
-                  <li><b>3 · Carbonic maceration.</b> The air is drawn out as in the vacuum set-up, then pure CO<sub>2</sub> is pumped in to fill the bag. Studies often call this <a class="gloss" href="#glossary">carbonic maceration</a>, a name borrowed from winemaking, where whole grapes ferment inside their own skins in a CO<sub>2</sub>-filled tank.</li>
-                </ul>
-                <p class="body-txt">The contrast case is the ordinary open tank, exposed to the air above it. A 2025 Colombian study calls that set-up <em>semi-anaerobic</em>, because the coffee at the bottom of an open tank still runs short of oxygen while the surface breathes (Reference [21]). Sealed-tank fermentation was first applied to coffee by da Mota and colleagues and by Martins and colleagues, both in 2020 (Reference [22]).</p>
+                <ol class="steps">
+                  <li><b>Pick and depulp, fast.</b> Ripe cherries are picked, and within 24 hours of harvest a machine (a depulper) squeezes the seeds out of the skin and pulp. Speed matters: left in the fruit, the cherry starts fermenting on its own terms.</li>
+                  <li><b>Ferment the mucilage loose.</b> The seeds come out coated in <a class="gloss" href="#glossary">mucilage</a>, a sticky, sugary layer that water alone will not shift. They go into a tank, dry or under water, and microbes digest that layer until the <a class="gloss" href="#glossary">parchment</a> (the papery shell around the seed) feels gritty rather than slimy. The Codex code of practice gives 12 to 36 hours; a 2016 review gives 12 to 48 hours; a 2023 review gives 6 to 72 hours depending on climate (References [28] to [30]).</li>
+                  <li><b>Wash.</b> The loosened mucilage is rinsed away in clean water, in channels or tanks, until the parchment is clean.</li>
+                  <li><b>Optional soak.</b> Some producers hold the washed coffee in clean water before drying: about 12 hours in Kenya, overnight and rarely up to 48 hours elsewhere. Kenya's double fermentation is a version of this: a second, shorter tank after the first wash, typically 12 to 24 hours.</li>
+                  <li><b>Dry.</b> The wet parchment dries on patios or raised beds for 7 to 15 days, or mechanically for 18 to 36 hours, down to 10 to 12 percent moisture. Then it rests, and the parchment is hulled off before export.</li>
+                </ol>
               </div>
             </details>
             <details class="card subfold">
-              <summary><span class="sum-h3">What goes in the tank: cherries, pulp and water</span></summary>
+              <summary><span class="sum-h3">Washed: the physics and chemistry</span></summary>
               <div class="sub-body">
+                <p class="body-txt">Water does three jobs here: it carries the fruit away, it is the medium the microbes live in, and it is what finally leaves during drying. The fermentation itself is a digestion, not a soak: microbes secrete enzymes that break the mucilage's pectin chains into soluble pieces the wash water can carry off. The microbes arrive in a set order. Yeasts work first, then lactic acid bacteria, and acetic acid bacteria come late, once alcohol and air are both available. As they work, the tank's pH falls from about 6.0 to 6.5 at the start to about 4.0, and that falling pH is the producer's clock: it tracks the acids being made, and it tells them the mucilage is nearly gone.</p>
+                <p class="body-txt">Because the fruit is removed before drying, very little sugar stays in contact with the seed, and the contact lasts hours rather than weeks. Some acids and alcohols still diffuse a short way into the seed, by the same diffusion Chapter 2 describes, but the dose is small. Drying is then a simple moisture problem: water leaves the parchment until the seed sits at 10 to 12 percent moisture, stable for storage. The method's real physical cost is water. A conventional washed mill uses about 40 litres of water per kilogram of dry parchment (about 10.6 US gallons per 2.2 lb), a figure from Cenicafé, the Colombian coffee research centre. A DESLIM mechanical <a class="gloss" href="#glossary">demucilager</a>, which scrapes the mucilage off by friction instead of fermenting and rinsing it away, brings that under 1 litre per kilogram (under 0.26 US gallons per 2.2 lb).</p>
+              </div>
+            </details>
+            <details class="card subfold">
+              <summary><span class="sum-h3">Washed: flavour, risks and limits</span></summary>
+              <div class="sub-body">
+                <p class="body-txt"><b>In the cup:</b> clean and bright, with clear acidity and the coffee's own origin character standing in front, because so little fermentation flavour is added on top. Washed is the reference process the others are usually described against.</p>
                 <ul class="clean">
-                  <li><b>Whole cherries or pulped coffee.</b> The tank can be filled with intact cherries, skin and all, or with coffee that has been pulped first so only the mucilage-coated seed goes in. Whole cherries keep their sugary pulp, and the sugar is the microbes' fuel: in one trial, whole-cherry juice started at 23.65 <a class="gloss" href="#glossary">°Brix</a> against 7.33 °Brix for pulped coffee, roughly three times the sugar reading (°Brix is, roughly, grams of sugar per 100 g (3.5 oz) of juice).</li>
-                  <li><b>Dry or with water.</b> Some runs ferment the coffee in its own juices only; others add water so the coffee sits submerged. Both count as anaerobic if the vessel is sealed.</li>
-                  <li><b>Vessel sizes in the trials</b> range from 20-litre buckets (5.3 US gallons) to 200-litre tanks (53 US gallons). These are experiments and small lots, not silos.</li>
-                  <li><b>Runs lasted 1 to 8 days (24 to 192 hours)</b> across the trials, far longer than ordinary washed fermentation, for which the Codex code of practice gives 12 to 36 hours. An anaerobic run is a long fermentation on purpose, and the length is one of the main things a producer is choosing.</li>
+                  <li><b>Over-fermentation is the named failure.</b> Leave the tank too long and the late acetic bacteria take over: the coffee picks up sour, vinegary notes that no washing removes.</li>
+                  <li><b>Under-fermentation leaves a mess.</b> Mucilage that survives the wash dries patchily on the parchment and can ferment again, unevenly, on the drying bed.</li>
+                  <li><b>Water is the limit.</b> The conventional process needs a lot of clean water and produces a lot of sugary wastewater, which is why mechanical demucilagers and water recycling matter where water is scarce.</li>
+                  <li><b>Weather still matters at the end.</b> Sun drying takes 7 to 15 days, and rain on wet parchment slows it and invites mould, the same drying risk every method shares.</li>
                 </ul>
               </div>
             </details>
-            <details class="chart-card subfold">
-              <summary><span class="chart-title">The sealed tank over time, and the three set-ups (Diagram)</span></summary>
+            <!-- METHOD: Natural -->
+            <div class="narrow">
+              <h4 style="margin-top:34px">Natural (dry)</h4>
+            </div>
+            <details class="card subfold">
+              <summary><span class="sum-h3">Natural: what happens, step by step</span></summary>
               <div class="sub-body">
-                <p class="chart-sub">What changes inside a sealed tank as the hours pass, and the vessels that produce those changes, with the open tank beside them for comparison.</p>
+                <ol class="steps">
+                  <li><b>Pick ripe cherries, and change nothing.</b> The whole cherry, skin, pulp, mucilage and seed together, goes straight to drying. There is no depulper and no tank.</li>
+                  <li><b>Spread thin.</b> The cherries are spread on raised beds or patios in a layer 3 to 5 cm thick (1.2 to 2 in), thin enough for air to reach every fruit.</li>
+                  <li><b>Turn, often.</b> In the first week the layer is turned 6 to 12 times a day, so every cherry spends time on the surface and none sits in its own moisture long enough to rot.</li>
+                  <li><b>Dry for weeks.</b> The fruit dries intact for 15 to 30 days (up to 30 days on average, weather permitting), until the seed inside reaches about 11 percent moisture and the cherry has become a hard, dark pod.</li>
+                  <li><b>Rest, then hull.</b> A clean natural typically dries in 18 to 24 days and goes into rest with the pulp at about pH 4.0 to 4.3. After resting, a huller strips the whole dried fruit off the seed in one go.</li>
+                </ol>
+              </div>
+            </details>
+            <details class="card subfold">
+              <summary><span class="sum-h3">Natural: the physics and chemistry</span></summary>
+              <div class="sub-body">
+                <p class="body-txt">A natural is a fermentation that happens inside a drying fruit. As long as the pulp holds sugars and moisture, the microbes living on and in the cherry keep working, and their acids and alcohols sit pressed against the seed for the whole drying period. Diffusion does the rest, slowly: compounds formed in the pulp migrate inward, down their concentration gradients, for days to weeks instead of the washed tank's hours. That long, wet contact is the whole chemical story of the method.</p>
+                <p class="body-txt">Drying is what ends it. The fermentation stops when the seed reaches about 11 percent moisture, because below that there is too little available water for microbes to live on. So the two processes, drying and fermenting, race each other inside the same fruit: dry fast and the fermentation is cut short; dry slowly, in thick layers or humid air, and it runs long. This is why the method needs dry weather. Rain does double damage: it re-wets fruit that was part-dried, restarting the microbes, and it washes sugars out of the pulp, taking potential flavour with it. Turning the layer is the producer's control on all of this: it evens out moisture and temperature through the bed of cherries and keeps any one fruit from sitting wet and airless at the bottom. The moisture gradient inside each cherry points outward the whole time, skin driest, seed last to dry, which is why the seed's moisture, not the fruit's appearance, is the number producers check.</p>
+              </div>
+            </details>
+            <details class="card subfold">
+              <summary><span class="sum-h3">Natural: flavour, risks and limits</span></summary>
+              <div class="sub-body">
+                <p class="body-txt"><b>In the cup:</b> bold and fruity, often winey or boozy, with a heavy, syrupy body and a softer, rounder acidity than a washed coffee. The pulp's sugars and the long fermentation leave more of their products in the seed, and the cup shows it. Naturals also divide tasters more than washed coffees do: the same intensity that reads as ripe fruit at its best reads as ferment at its worst, sometimes within one lot.</p>
+                <ul class="clean">
+                  <li><b>Mould is the standing risk.</b> Weeks of slow drying in a sugary fruit is an open invitation; the turning schedule and the thin layer exist to refuse it.</li>
+                  <li><b>Uneven drying, uneven coffee.</b> Cherries picked at mixed ripeness, or a layer turned too rarely, dry at different rates and ferment by different amounts, so one lot can taste ripe and over-fermented at once.</li>
+                  <li><b>The weather sets the limits.</b> The method belongs to dry harvest seasons. In a wet climate the fruit cannot dry fast enough, and the same process that builds fruit flavour builds rot instead.</li>
+                  <li><b>It is slow and land-hungry.</b> Fifteen to thirty days on beds, turned by hand, ties up drying space far longer than a washed lot does.</li>
+                </ul>
+              </div>
+            </details>
+            <!-- METHOD: Honey -->
+            <div class="narrow">
+              <h4 style="margin-top:34px">Honey (pulped natural)</h4>
+            </div>
+            <details class="card subfold">
+              <summary><span class="sum-h3">Honey: what happens, step by step</span></summary>
+              <div class="sub-body">
+                <ol class="steps">
+                  <li><b>Pulp the cherry.</b> As in the washed method, a depulper removes the skin and pulp soon after picking. The name has nothing to do with bees: the sticky mucilage left on the seed looks and feels like honey.</li>
+                  <li><b>Keep some or all of the mucilage.</b> Instead of fermenting and washing it off, the producer leaves the mucilage wholly or partly on the parchment. How much stays is the method's main dial.</li>
+                  <li><b>Skip the tank and the wash.</b> There is no fermentation tank and no washing step. The sticky, sugar-coated parchment goes straight to the drying beds.</li>
+                  <li><b>Dry with the coating on.</b> The mucilage dries onto the parchment over 12 to 30 days overall (2023 review, Reference [29]), the sugar layer darkening as it dries, which is where the colour names below come from.</li>
+                  <li><b>Rest and hull as usual.</b> Once the seed reaches storage moisture, the parchment, with its dried mucilage, is hulled off.</li>
+                </ol>
+                <p class="body-txt">The method began in Brazil in the 1990s under the name <a class="gloss" href="#glossary">pulped natural</a>: a way to get some of the natural process's sweetness while using far less water than a washed coffee and drying faster than a whole cherry can.</p>
+              </div>
+            </details>
+            <details class="card subfold">
+              <summary><span class="sum-h3">Honey: the physics and chemistry</span></summary>
+              <div class="sub-body">
+                <p class="body-txt">The mucilage is a sugar-rich gel, and leaving it on changes the drying physics. The sticky layer holds moisture against the parchment, so the seed dries more slowly than a washed coffee's, and while it stays moist its sugars ferment gently, in the open air, on the seed's surface. More mucilage means more sugar in contact with the seed, a slower dry, and more fermentation products available to diffuse inward. Less mucilage behaves more like a washed coffee. It is a dial, not a switch, and producers name settings of the dial by colour: white, yellow, red and black, in order of how much mucilage is left and how dark it dries.</p>
+                <p class="body-txt">Those colour grades are producer conventions with no standard behind them, and the two reviews used here disagree, so treat any single figure with care. A 2016 review gives yellow honey about 25 percent of the mucilage kept, red about 50 percent, and black usually fully covered, drying in about 8 days (yellow), about 12 days (red) and about 30 days (black) (Reference [30]). A 2023 review instead gives a range of 20 percent to 80 percent of the pulp material left on the seed across the grades (Reference [29]). The honest summary is the direction, not the decimals: more mucilage kept means a darker grade name, a slower dry, and a sweeter, heavier cup, and one farm's red is not necessarily another farm's red.</p>
+              </div>
+            </details>
+            <details class="card subfold">
+              <summary><span class="sum-h3">Honey: flavour, risks and limits</span></summary>
+              <div class="sub-body">
+                <p class="body-txt"><b>In the cup:</b> between washed and natural, as the method sits between them in construction: sweet and rounded, with more body than a washed coffee and less of the natural's winey intensity. Turning the mucilage dial up moves the cup toward the natural end: sweeter, heavier, and slower to dry. Because the coating ferments gently in the open air rather than in a tank, the fruit notes stay soft rather than winey, closer to dried fruit and brown sugar than to the natural's punch.</p>
+                <ul class="clean">
+                  <li><b>The fault risk rises with the dial.</b> More mucilage means a stickier, wetter layer that dries slowly and unevenly, and a greater chance of mould or uncontrolled fermentation on the bed.</li>
+                  <li><b>Sticky coffee is hard to handle.</b> Mucilage-coated parchment clumps together, so the beds need frequent turning to keep air moving and stop the layer matting into a solid sheet.</li>
+                  <li><b>The names do not travel.</b> Because the colour grades have no standard, a bag labelled red honey tells you the producer's intention, not a measured amount of mucilage; the reviews above cannot even agree on the percentages.</li>
+                  <li><b>Water saved, time spent.</b> Skipping the wash saves the washed method's water, but drying takes 12 to 30 days, closer to a natural's calendar than a washed coffee's.</li>
+                </ul>
+              </div>
+            </details>
+            <!-- METHOD: Aerobic -->
+            <div class="narrow">
+              <h4 style="margin-top:34px">Aerobic fermentation (the baseline)</h4>
+            </div>
+            <details class="card subfold">
+              <summary><span class="sum-h3">Aerobic: what happens, step by step</span></summary>
+              <div class="sub-body">
+                <ol class="steps">
+                  <li><b>Pulp the cherries.</b> Aerobic fermentation is the fermentation step inside the classic washed process: depulped, mucilage-coated seeds go into a tank, exactly as in the washed subsection above.</li>
+                  <li><b>Leave the tank open.</b> <a class="gloss" href="#glossary">Aerobic</a> means air is free to circulate over and through the fermenting coffee. There is no lid, no seal and no airlock; the surface of the mass breathes for the whole run.</li>
+                  <li><b>Ferment for 12 to 36 hours, typically.</b> The microbes digest the mucilage, as in any washed fermentation, and the run ends when the parchment feels gritty and the coffee is washed.</li>
+                  <li><b>Wash and dry as washed.</b> From the tank the coffee follows the washed path: rinse, optional soak, then dry to 10 to 12 percent moisture.</li>
+                </ol>
+                <p class="body-txt">It earns its own subsection because it is the baseline every sealed-tank claim is measured against. When a study compares anaerobic with ordinary fermentation, this open tank is the ordinary fermentation, and the anaerobic subsection below only makes sense next to it.</p>
+              </div>
+            </details>
+            <details class="card subfold">
+              <summary><span class="sum-h3">Aerobic: the physics and chemistry, and the anaerobic contrast</span></summary>
+              <div class="sub-body">
+                <p class="body-txt">Temperature sets the clock, because it sets the microbes' working speed. The same fermentation takes roughly 24 to 36 hours at 20 °C (68 °F), about 12 hours at 30 °C (86 °F), and 48 to 72 hours at 10 to 15 °C (50 to 59 °F): cool highland nights can stretch a one-day ferment into three. With air freely available, yeasts and acetic acid bacteria dominate the community. The oxygen is the reason for the second group: acetic acid bacteria use it to turn the yeasts' ethanol into acetic acid, so an open tank steadily makes vinegar's acid alongside the fruit's own citric and malic acids. Those three, acetic, citric and malic, are the main acids of a clean aerobic ferment. Producers watch the pH: 3.8 to 4.5 is the target window for a clean ferment, and below 3.5 the tank has gone too far, with vinegary off-flavours to show for it.</p>
+                <p class="body-txt"><b>Aerobic against anaerobic, in one place:</b></p>
+                <ul class="clean">
+                  <li><b>Dominant organisms:</b> yeasts plus acetic acid bacteria (aerobic) against yeasts plus lactic acid bacteria (anaerobic).</li>
+                  <li><b>Main acids:</b> acetic, citric and malic (aerobic) against lactic above all (anaerobic).</li>
+                  <li><b>Esters:</b> the fruity-smelling compounds build up far more in the sealed tank, where their alcohol ingredients are not being burned off into acetic acid.</li>
+                  <li><b>Typical duration:</b> 12 to 36 hours (aerobic) against 24 to 120 hours (anaerobic).</li>
+                  <li><b>Defect risk:</b> acetic over-fermentation, the vinegar direction (aerobic), against butyric and propionic over-fermentation, the rancid direction (anaerobic).</li>
+                </ul>
+              </div>
+            </details>
+            <details class="card subfold">
+              <summary><span class="sum-h3">Aerobic: flavour, risks and limits</span></summary>
+              <div class="sub-body">
+                <p class="body-txt"><b>In the cup:</b> bright, clean and defined acidity, the classic washed profile. The open tank's job is mostly subtractive: it removes the mucilage and adds only a light fermentation signature of its own. That lightness is the point of the baseline: whatever a sealed tank adds beyond it can be credited to the seal, because everything else, the fruit, the water and the drying, can be held the same.</p>
+                <ul class="clean">
+                  <li><b>Over-fermentation tastes of vinegar.</b> Given time and air, the acetic bacteria keep converting ethanol to acetic acid; past pH 3.5 the cup turns sharp and vinegary, the defect this method is known by.</li>
+                  <li><b>The open tank takes the weather in.</b> A cold night can double the run; a hot afternoon can halve it. The producer is managing a clock they do not fully control, which is the practical limit of the method.</li>
+                  <li><b>The surface and the depths differ.</b> The top of the mass breathes while the bottom runs short of air, so an open tank is really aerobic at the top and partway anaerobic below; a 2025 Colombian study calls the set-up semi-anaerobic for exactly this reason (Reference [21]).</li>
+                  <li><b>It is short, and that caps its effect.</b> Twelve to thirty-six hours of contact can only move so much chemistry into the seed; producers wanting a stronger fermentation signature have to change the conditions, which is the sealed tank's whole pitch.</li>
+                </ul>
+              </div>
+            </details>
+            <!-- METHOD: Anaerobic -->
+            <div class="narrow">
+              <h4 style="margin-top:34px">Anaerobic (sealed tank, SIAF and carbonic maceration)</h4>
+            </div>
+            <details class="card subfold">
+              <summary><span class="sum-h3">Anaerobic: what happens, step by step</span></summary>
+              <div class="sub-body">
+                <ol class="steps">
+                  <li><b>Fill a sealable vessel.</b> Whole cherries or pulped coffee go into a tank or bag, dry or with water. Trial vessels run from 20-litre buckets (5.3 US gallons) to 200-litre tanks (53 US gallons): small lots, not silos.</li>
+                  <li><b>Seal the air out.</b> In <a class="gloss" href="#glossary">SIAF</a> (self-induced anaerobic fermentation) the lid closes and the microbes do the rest: they use up the oxygen inside, CO<sub>2</sub> builds up in its place, and an <a class="gloss" href="#glossary">airlock</a> lets CO<sub>2</sub> out while stopping air coming in. Two variants set the conditions by machine: vacuum bags with the air drawn out, and vacuum plus pure CO<sub>2</sub> pumped in, called <a class="gloss" href="#glossary">carbonic maceration</a>, a name borrowed from winemaking.</li>
+                  <li><b>Ferment long.</b> Trial runs lasted 24 to 192 hours, far longer than the open tank's 12 to 36. Whole cherries bring more fuel: their juice started one trial at 23.65 <a class="gloss" href="#glossary">°Brix</a> against 7.33 °Brix for pulped coffee.</li>
+                  <li><b>Open, then dry as usual.</b> The coffee is dried like any other, to about 11 to 12 percent moisture, which is why bags are named for both steps: anaerobic natural, anaerobic washed.</li>
+                </ol>
+                <p class="body-txt">Sealed-tank fermentation was first applied to coffee by da Mota et al. and Martins et al., both in 2020 (Reference [22]). In practice the tank is low in oxygen, not perfectly free of it; what the seal changes is the supply: no fresh air arrives to replace what the microbes use.</p>
+              </div>
+            </details>
+            <details class="card subfold">
+              <summary><span class="sum-h3">Anaerobic: the physics and chemistry inside the seal</span></summary>
+              <div class="sub-body">
+                <p class="body-txt">Two pieces of gas physics run the tank. The CO<sub>2</sub> the microbes release has nowhere to go: by the ideal gas law (PV = nRT, worked in full below), half a mole of CO<sub>2</sub> in a 20-litre (5.3 US gallon) headspace at 20 °C (68 °F) adds about 0.61 bar (8.8 psi), which is why the airlock bubbles and sealed bags swell. Some of that CO<sub>2</sub> also dissolves and forms carbonic acid, a small extra push on pH in the same direction as the fermentation acids. What the microbes make then reaches the seed by diffusion, Chapter 2's slow random walk, one reason these runs last days.</p>
+                <p class="chart-sub">The sealed tank over time: what changes inside as the hours pass, and the vessels that produce those changes, with the open tank beside them for comparison.</p>
                 <svg viewBox="0 0 720 664" role="img" aria-label="Sealed tank over time: chart of oxygen falling, carbon dioxide rising and pH falling across 192 hours, above a schematic of a SIAF tank with airlock, a vacuum bag, a CO2-injected bag and an open tank">
                   <g font-size="13" style="fill:var(--ink-2)">
                     <text x="86" y="30" font-weight="600" style="fill:var(--ink)">Inside the sealed tank</text>
@@ -985,12 +1190,31 @@
                   </g>
                 </svg>
                 <p class="chart-note">Schematic. The three curves are smooth shapes anchored to the trial values in the text (oxygen used up early, CO<sub>2</sub> taking over the gas in the tank, pH 5.8 falling to 4.4 within 72 hours, runs lasting up to 192 hours); they are not traces measured minute by minute in one tank, and the exact path differs with the coffee, the vessel and the temperature. See Assumptions for what is inferred rather than measured.</p>
+                <ul class="clean">
+                  <li><b>pH falls, steadily.</b> From 5.8 to 4.4 in 72 hours in one Brazilian tank of pulped coffee; from about 5.1 to as low as 3.70 in 72 hours in another trial (References [22] and [24]).</li>
+                  <li><b>Lactic acid is the main acid formed.</b> After 180 hours of SIAF, dried natural coffee held 13.20 g/kg (about 0.21 oz per lb) of it, from none at the start (Reference [23]). Ethanol builds alongside: coffee fermented 72 hours held about six times more than at 24 hours.</li>
+                  <li><b>The sealed mass stays cooler.</b> In a room at 20 °C (68 °F), sealed tanks warmed only 0.5 to 3.7 °C (0.9 to 6.7 °F), against 5.1 to 17.6 °C (9.2 to 31.7 °F) for open tanks (Reference [21]): little oxygen means little of the heat-making aerobic activity.</li>
+                  <li><b>The tank is not uniform.</b> Lactic acid at 72 hours reached 5.06, 4.70 and 2.18 g/L in the bottom, middle and top layers of one tall tank, so producers stir the mass to even it out.</li>
+                  <li><b>The microbes change shifts.</b> Yeasts (<em>Saccharomyces</em>, <em>Pichia</em>, <em>Issatchenkia</em>, <em>Torulaspora</em>) work first; then lactic acid bacteria take over, <em>Weissella</em> dominant, then <em>Leuconostoc</em> and <em>Lactiplantibacillus</em>. Acetic acid bacteria, which need oxygen, were far more common in open tanks, at 20 to 57 percent of the bacterial community (Reference [21]).</li>
+                </ul>
               </div>
             </details>
             <details class="card subfold">
-              <summary><span class="sum-h3">The physics and chemistry of a sealed tank</span></summary>
+              <summary><span class="sum-h3">Anaerobic: flavour, risks and limits</span></summary>
               <div class="sub-body">
-                <p class="body-txt">Four things happen at once inside the seal, and each one is a piece of physics or chemistry this guide uses elsewhere. The microbes consume oxygen and release CO<sub>2</sub> as they feed on the sugars. That gas exchange pressurises the vessel. Some of the CO<sub>2</sub> dissolves and makes a weak acid. And everything the microbes produce then has to travel, by diffusion, from the mucilage into the bean.</p>
+                <p class="body-txt"><b>In the cup:</b> tropical fruit and winey, fermented notes. A Zurich study (ZHAW) found ethyl 3-methylbutanoate, a fruity-smelling ester, 125 times more abundant in natural carbonic macerated coffee than in washed coffee. Scores can be high: in one trial all the SIAF coffees scored 84 or more, the best 87.50 (whole cherries, no water, 96 hours) against 83.30 natural and 83.60 pulped controls (Reference [23]); in Peru, one Catimor scored 87.38 anaerobic against 85.75 natural, 84.00 washed, 82.88 honey and 82.50 for a control. A 2025 meta-analysis of 22 studies found fermentation raised SCA scores by 0.6 to 1.4 points on average.</p>
+                <p class="body-txt"><b>The counter-evidence:</b> a 2025 Colombian trial found sealed versus open tanks did not significantly change sensory quality (Reference [21]), and the same meta-analysis found fully anaerobic conditions scored 1.22 points lower than aerobic ones. Fermentation changes a coffee; it does not guarantee a higher score.</p>
+                <ul class="clean">
+                  <li><b>The seed is alive, and can die in the tank.</b> Long runs can kill the living seed, and a dead seed is a different material for everything that follows.</li>
+                  <li><b>Unwelcome fungi gain ground with time.</b> Mycotoxin-producing fungi became more common as fermentation went on, a cost of the same long runs that build the flavour.</li>
+                  <li><b>Butyric acid is the named failure.</b> It is an undesirable product of prolonged fermentation, although it was not detected in two Brazilian SIAF trials; propionic acid belongs to the same over-fermentation family.</li>
+                </ul>
+              </div>
+            </details>
+            <details class="card subfold">
+              <summary><span class="sum-h3">Processing equations: the sealed tank, worked in full</span></summary>
+              <div class="sub-body">
+                <p class="body-txt">The three equations behind the anaerobic subsection, kept together here so no single method carries more apparatus than the others. Each comes with a full legend and a worked example, as everywhere in this guide.</p>
                 <div class="eq-block">
                   <div class="eq"><span class="var">P</span><span class="var">V</span> = <span class="var">n</span><span class="var">R</span><span class="var">T</span>
                     <small>The ideal gas law: why a sealed tank of fermenting coffee would pressurise, and why it needs an airlock.</small>
@@ -1043,7 +1267,6 @@
                     </div>
                   </div>
                 </div>
-                <p class="body-txt"><strong>Diffusion does the last leg.</strong> Acids and alcohols are made in the mucilage and juice, outside the seed. To change the bean itself they must cross into it, and the only way in is diffusion, the random walk of Chapter 2, moving down a concentration gradient exactly as <a class="gloss" href="#glossary">Fick's law</a> describes: <em>J</em> = −<em>D</em> · (d<em>C</em>/d<em>x</em>), where <em>J</em> is the flow of a compound per area per second, <em>D</em> its diffusion coefficient (units: m²/s; typical: ~2.5 × 10<sup>−9</sup> m²/s, the value used in Chapter 2) and d<em>C</em>/d<em>x</em> how steeply its concentration changes with distance. Where the juice holds more lactic acid than the bean's interior, the gradient points inward and lactic acid walks in. Diffusion is slow and distance-limited, which is one reason these fermentations run for days rather than hours, and why what forms in the tank ends up in the cup at all.</p>
                 <div class="eq-block">
                   <div class="eq"><span class="var">N</span>(<span class="var">t</span>) = <span class="var">N</span><sub>0</sub> · 2<sup><span class="var">t</span>∕<span class="var">g</span></sup>
                     <small>Microbial growth, early on: each doubling time, the population doubles. A general rule of thumb for microbes, not a coffee-specific rate.</small>
@@ -1072,65 +1295,22 @@
               </div>
             </details>
             <details class="card subfold">
-              <summary><span class="sum-h3">What happens inside: pH, acid, alcohol and heat</span></summary>
-              <div class="sub-body">
-                <ul class="clean">
-                  <li><b>pH falls, steadily.</b> In a Brazilian tank of pulped coffee, pH fell from 5.8 to 4.4 in 72 hours; in another trial it fell from about 5.1 to as low as 3.70 within 72 hours (References [22] and [24]). The falling pH is the tank's clock: it tracks the acids the microbes are making.</li>
-                  <li><b>Lactic acid is the main acid formed</b> in several trials. In the Colombian comparison, sealed tanks used more of the available glucose and produced more lactic acid than open tanks (Reference [21]). After 180 hours of SIAF with no yeast added, dried natural coffee held 13.20 g/kg (about 0.21 oz per lb) of lactic acid; none was found at the start (Reference [23]).</li>
-                  <li><b>Alcohol builds up.</b> Green coffee fermented for 72 hours held about six times more ethanol than coffee fermented for 24 hours, the yeasts' other main product accumulating alongside the acids.</li>
-                  <li><b>The mass stays cooler than an open tank's.</b> In a room held at 20 °C (68 °F), the temperature rise was only 0.5 to 3.7 °C (0.9 to 6.7 °F) for sealed tanks, against 5.1 to 17.6 °C (9.2 to 31.7 °F) for open tanks (Reference [21]). With little oxygen, the heat-making aerobic activity of an open fermentation is largely switched off.</li>
-                  <li><b>The tank is not uniform.</b> Lactic acid at 72 hours reached 5.06, 4.70 and 2.18 g/L in the bottom, middle and top layers of one tall tank (1 g/L ≈ 0.13 oz per US gallon). The bottom ferments ahead of the top, which is why producers stir the mass to even it out.</li>
-                </ul>
-              </div>
-            </details>
-            <details class="card subfold">
-              <summary><span class="sum-h3">Who lives in the tank: the microbes, in order</span></summary>
-              <div class="sub-body">
-                <p class="body-txt">A sealed tank runs a succession, one community handing over to the next as the conditions change. Early on, yeasts and other microbes use up the oxygen that was sealed in with the coffee. Once it is gone, the tank belongs to microbes that can work without it: yeasts (including <em>Saccharomyces</em>, <em>Pichia</em>, <em>Issatchenkia</em> and <em>Torulaspora</em>) and the <a class="gloss" href="#glossary">lactic acid bacteria</a>, which turn sugars into lactic acid. In the Colombian trial, <em>Weissella</em> was the dominant lactic acid bacterium, followed by <em>Leuconostoc</em> and <em>Lactiplantibacillus</em> (Reference [21]).</p>
-                <p class="body-txt">The seal also shuts someone out. Acetic acid bacteria, mainly <em>Acetobacter</em>, need oxygen to turn alcohol into acetic acid, and they were far more common in open tanks, at 20 to 57 percent of the bacterial community, than in sealed ones (Reference [21]). Sealing the tank is, in microbial terms, a choice of which acids get made: lactic inside, with acetic largely kept out.</p>
-                <p class="body-txt">One caution belongs here. It is tempting to credit a single microbe with a single tasting note, and the succession above makes that story easy to tell. In practice the communities differ with the farm, the fruit and the season, and tracing one microbe to one note in the cup is still hard to generalise from the trials so far.</p>
-              </div>
-            </details>
-            <details class="card subfold">
-              <summary><span class="sum-h3">What it tastes like, and how strong the evidence is</span></summary>
-              <div class="sub-body">
-                <p class="body-txt">Tasters reach for the same family of words: tropical fruit (mango, pineapple, peach, passion fruit), winey and fermented notes, and, in the carbonic maceration work, bright wine-like fruit. Chemistry backs part of the vocabulary. A Zurich study (ZHAW) found ethyl 3-methylbutanoate, a fruity-smelling compound, 125 times more abundant in natural carbonic macerated coffee than in washed coffee, alongside 2-methylpropanal and 3-methylbutanal standing out in the same comparison.</p>
-                <ul class="clean">
-                  <li><b>SIAF trial scores.</b> In one trial all the SIAF coffees scored 84 points or more. The highest score, 87.50, came from whole cherries fermented without water for 96 hours, against 83.30 for the natural control and 83.60 for the pulped control (Reference [23]).</li>
-                  <li><b>Peru, one variety four ways.</b> Catimor scored 87.38 anaerobic, 85.75 natural, 84.00 washed and 82.88 honey, against 82.50 for a control.</li>
-                  <li><b>The pooled picture.</b> A 2025 meta-analysis pooling 22 studies found that fermentation raised SCA scores by 0.6 to 1.4 points on average.</li>
-                  <li><b>Yunnan, 2026.</b> Cherries split four ways (wet, dry, and each with seven days of sealed low-oxygen fermentation first) had more than 1,600 compounds identified, 843 of them differing significantly, and five Q Graders scored the anaerobic coffees higher for aroma, flavour, aftertaste, acidity, body and balance. It covered one variety, one region, one harvest and one fermentation length, so it shows what happened there, not what must happen everywhere.</li>
-                </ul>
-                <p class="body-txt"><strong>The nuance, stated plainly.</strong> The 2025 Colombian trial found that sealed versus open tanks did not significantly change sensory quality (Reference [21]), and the same meta-analysis found fully anaerobic conditions scored <em>lower</em> than aerobic ones by 1.22 points on average. Read together: fermentation reliably changes a coffee, and anaerobic conditions reliably change it in a particular direction, but neither guarantees a higher score. Anaerobic processing is a tool, not a guarantee.</p>
-              </div>
-            </details>
-            <details class="card subfold">
-              <summary><span class="sum-h3">Risks and limits</span></summary>
-              <div class="sub-body">
-                <ul class="clean">
-                  <li><b>The seed is alive, and can die in the tank.</b> A coffee seed enters fermentation as living tissue. Long runs can kill it, and a dead seed is a different material from a living one for everything that follows.</li>
-                  <li><b>Unwelcome fungi gain ground with time.</b> Mycotoxin-producing fungi became more common as fermentation went on in the trials, one cost that grows with the same long runs that build the flavour.</li>
-                  <li><b>Butyric acid is the named failure.</b> Butyric acid is listed among the undesirable products of prolonged fermentation, although it was not detected in two Brazilian SIAF trials. One open-tank sample in the Colombian comparison carried a phenolic defect (Reference [21]).</li>
-                  <li><b>Drying afterwards is ordinary.</b> Once the tank opens, the coffee is dried like any other coffee, to about 11 to 12 percent moisture, and producers often name the result after both steps: “anaerobic natural” or “anaerobic washed”, the tank first, the drying method second.</li>
-                </ul>
-              </div>
-            </details>
-            <details class="card subfold">
-              <summary><span class="sum-h3">Four processes, side by side (Table)</span></summary>
+              <summary><span class="sum-h3">Five processes, side by side (Table)</span></summary>
               <div class="sub-body">
                 <table class="cmp-table">
                   <thead>
-                    <tr><th scope="col">Question</th><th scope="col">Washed</th><th scope="col">Natural</th><th scope="col">Honey</th><th scope="col">Anaerobic</th></tr>
+                    <tr><th scope="col">Question</th><th scope="col">Washed</th><th scope="col">Natural</th><th scope="col">Honey</th><th scope="col">Aerobic</th><th scope="col">Anaerobic</th></tr>
                   </thead>
                   <tbody>
-                    <tr><th scope="row">What stays on the bean</th><td>Fruit removed before drying; only the mucilage layer ferments, then is washed off</td><td>The whole cherry, skin and pulp, stays on while it dries</td><td>Skin removed; some of the mucilage is left on for drying</td><td>Whole cherries or pulped coffee, sealed in the tank; afterwards dried as a natural or washed coffee</td></tr>
-                    <tr><th scope="row">Oxygen exposure</th><td>Open tanks and open air: air present throughout</td><td>Open air, on raised beds or patios</td><td>Open air while the mucilage dries</td><td>Sealed vessel: low in oxygen, not perfectly free of it; levels inferred from the set-up, not measured (see Assumptions)</td></tr>
-                    <tr><th scope="row">Typical time</th><td>Fermentation 12 to 36 hours (Codex code of practice), then drying</td><td>No separate tank step in the classic method; the fruit dries on the seed</td><td>No standard tank step; the mucilage dries on the seed</td><td>24 to 192 hours (1 to 8 days) sealed in the trials [21][22][23][24], then drying</td></tr>
-                    <tr><th scope="row">Main acids and microbes</th><td>Mixed microbes from the environment in an open fermentation</td><td>Fermentation inside the intact, drying cherry</td><td>Mucilage sugars ferment as they dry on the seed</td><td>Yeasts plus lactic acid bacteria; lactic acid the main acid in several trials; acetic acid bacteria scarce [21][24]</td></tr>
-                    <tr><th scope="row">Typical cup character</th><td>Cleaner, brighter starting chemistry (this chapter)</td><td>Fruity, winey compounds added by fermenting in the fruit (this chapter)</td><td>Between washed and natural</td><td>Tropical fruit, winey and fermented notes in tasters' reports [21][23][25]</td></tr>
+                    <tr><th scope="row">What stays on the bean while it dries or ferments</th><td>Fruit removed before drying; only the mucilage layer ferments, then is washed off</td><td>The whole cherry, skin and pulp, stays on while it dries</td><td>Skin and pulp removed; some or all of the mucilage is left on for drying</td><td>The mucilage layer, on pulped coffee in an open fermentation tank; then washed off, as washed</td><td>Whole cherries or pulped coffee, sealed in the tank; afterwards dried as a natural or washed coffee</td></tr>
+                    <tr><th scope="row">Oxygen</th><td>Open tanks and open air: air present throughout</td><td>Open air, on raised beds or patios</td><td>Open air while the mucilage dries</td><td>Open tank: air free to circulate over the mass</td><td>Sealed vessel: low in oxygen, not perfectly free of it; levels inferred from the set-up, not measured (see Assumptions)</td></tr>
+                    <tr><th scope="row">Typical time</th><td>Fermentation 12 to 36 hours (Codex code of practice), then drying</td><td>No separate tank step; the fruit ferments as it dries, 15 to 30 days</td><td>No tank step and no wash; the mucilage ferments as it dries</td><td>Fermentation 12 to 36 hours, typical; temperature sets the pace</td><td>24 to 192 hours sealed in the trials [21][22][23][24], then drying</td></tr>
+                    <tr><th scope="row">Drying time</th><td>7 to 15 days on patios or raised beds; 18 to 36 hours mechanically; to 10 to 12% moisture</td><td>15 to 30 days; a clean natural typically 18 to 24 days; to about 11% moisture</td><td>12 to 30 days (2023 review); by grade about 8 days yellow, 12 red, 30 black (2016 review)</td><td>As washed, after the tank: 7 to 15 days on beds</td><td>As the underlying method, natural or washed, after the tank; to about 11 to 12% moisture</td></tr>
+                    <tr><th scope="row">Water use</th><td>About 40 litres per kg of dry parchment conventionally (Cenicafé); under 1 litre per kg with a DESLIM mechanical demucilager</td><td>No washing step; drying only</td><td>No washing step; drying only</td><td>As washed: the tank is followed by a wash</td><td>Varies by set-up: some runs add water to the tank, others ferment in the coffee's own juices</td></tr>
+                    <tr><th scope="row">Typical cup character</th><td>Clean, bright acidity, origin character clear</td><td>Bold, fruity, winey or boozy; heavy syrupy body; softer, rounder acidity</td><td>Between washed and natural: sweet and rounded; more mucilage, sweeter and heavier</td><td>Bright, clean, defined acidity (the classic washed profile)</td><td>Tropical fruit, winey and fermented notes in tasters' reports [21][23][25]</td></tr>
                   </tbody>
                 </table>
-                <p class="chart-note">Every number in this table carries its source in its cell. Read the table as tendencies, not promises: the ranges overlap, coffees cross categories (an anaerobic coffee is usually also a natural or a washed coffee underneath), and method alone does not fix flavour. Variety, fruit, temperature and time move the result as much as the process name does.</p>
+                <p class="chart-note">Read the table as tendencies, not promises: the ranges overlap, coffees cross categories (an anaerobic coffee is usually also a natural or a washed coffee underneath, and a washed coffee's tank fermentation is the aerobic row), and method alone does not fix flavour. Variety, fruit, temperature and time move the result as much as the process name does.</p>
               </div>
             </details>
           </div>
@@ -1138,7 +1318,7 @@
       </div>
     </section>
 
-    <!-- ================= CH 2 DIFFUSION ================= -->
+        <!-- ================= CH 2 DIFFUSION ================= -->
     <section class="band alt fsec" id="diffusion">
       <div class="wrap">
         <details class="fold">
@@ -3853,9 +4033,9 @@
             <div class="narrow">
               <p class="body-txt">These are the equations that run the whole guide. Each one is stated in its chapter with a full legend (every symbol defined, with units and typical values) and a worked example to follow step by step. This page is the index: the formula, what it governs, and where its full treatment lives. <strong>Watch the reused symbols:</strong> τ is the diffusion time in Chapter 2, but the cooling constant τ<sub>c</sub> in Chapter 6; D is the diffusion coefficient in the d² law and Fick's law, but the pore diameter in the Reynolds number; Q is the instantaneous flow in Darcy's law, but the average flow (volume ÷ time) in Chapter 20. Each equation's own chapter owns its symbols.</p>
               <ul class="clean">
-                <li><div class="eq-mini"><span class="var">P</span><span class="var">V</span> = <span class="var">n</span><span class="var">R</span><span class="var">T</span></div><b>Ideal gas law</b>, why a sealed fermentation tank pressurises as microbes add CO<sub>2</sub> to its headspace, and why it needs an airlock. Full legend and worked example in <em><a href="#bean">Chapter 1</a></em> (anaerobic processing).</li>
-                <li><div class="eq-mini">CO<sub>2</sub> + H<sub>2</sub>O ⇌ H<sub>2</sub>CO<sub>3</sub> ⇌ H<sup>+</sup> + HCO<sub>3</sub><sup>−</sup></div><b>Carbonic acid equilibrium</b>, dissolved CO<sub>2</sub> forms a weak acid in the tank's juices, a small extra push on pH alongside the fermentation acids. <em><a href="#bean">Chapter 1</a></em> (anaerobic processing).</li>
-                <li><div class="eq-mini"><span class="var">N</span>(<span class="var">t</span>) = <span class="var">N</span><sub>0</sub> · 2<sup><span class="var">t</span>∕<span class="var">g</span></sup></div><b>Microbial growth</b>, a population doubling every <em>g</em> hours grows exponentially early on, the reason a fermentation tank's first day decides so much. A general rule of thumb, not a coffee-specific rate. <em><a href="#bean">Chapter 1</a></em> (anaerobic processing).</li>
+                <li><div class="eq-mini"><span class="var">P</span><span class="var">V</span> = <span class="var">n</span><span class="var">R</span><span class="var">T</span></div><b>Ideal gas law</b>, why a sealed fermentation tank pressurises as microbes add CO<sub>2</sub> to its headspace, and why it needs an airlock. Full legend and worked example in <em><a href="#bean">Chapter 1</a></em> (processing: the sealed tank).</li>
+                <li><div class="eq-mini">CO<sub>2</sub> + H<sub>2</sub>O ⇌ H<sub>2</sub>CO<sub>3</sub> ⇌ H<sup>+</sup> + HCO<sub>3</sub><sup>−</sup></div><b>Carbonic acid equilibrium</b>, dissolved CO<sub>2</sub> forms a weak acid in the tank's juices, a small extra push on pH alongside the fermentation acids. <em><a href="#bean">Chapter 1</a></em> (processing: the sealed tank).</li>
+                <li><div class="eq-mini"><span class="var">N</span>(<span class="var">t</span>) = <span class="var">N</span><sub>0</sub> · 2<sup><span class="var">t</span>∕<span class="var">g</span></sup></div><b>Microbial growth</b>, a population doubling every <em>g</em> hours grows exponentially early on, the reason a fermentation tank's first day decides so much. A general rule of thumb, not a coffee-specific rate. <em><a href="#bean">Chapter 1</a></em> (processing: the sealed tank).</li>
                 <li><div class="eq-mini"><span class="var">τ</span> ≈ <span class="var">d</span>² ∕ <span class="var">D</span></div><b>Diffusion time</b>, how long a particle of diameter <em>d</em> needs to extract. The square is why grind distribution rules everything. <em><a href="#diffusion">Chapter 2.</a></em></li>
                 <li><div class="eq-mini"><span class="var">Pe</span> = <span class="var">vL</span> ∕ <span class="var">D</span></div><b>Péclet number</b>, advection versus diffusion: Pe ≈ 6 in the pores between particles, ≈ 0 inside a particle, where diffusion is the only way out. Worked example in <em><a href="#diffusion">Chapter 2</a></em>.</li>
                 <li><div class="eq-mini">Extraction yield = TDS × beverage mass ∕ dose</div><b>Extraction yield</b>, the bookkeeping that turns a refractometer reading into the vertical axis of the brewing control chart. Target: 18–22%. <em><a href="#chart">Chapter 3.</a></em></li>
@@ -3890,6 +4070,7 @@
               <ul class="clean">
                 <li id="gloss-a"><b>Activation energy (E<sub>a</sub>)</b>: the energy barrier a compound must clear to dissolve and react; the E<sub>a</sub> in the Arrhenius law. This guide's model uses an assumed, illustrative 45 kJ/mol, not a measured coffee constant; a coffee-specific literature value is about 16 kJ/mol (Wang &amp; Lim 2021). Different compounds have different barriers, the deep reason temperature changes a cup's balance, not just its strength (Chapter 6).</li>
                 <li><b>Advection</b>: transport by bulk flow: water physically carrying dissolved compounds along. Dominates between particles; absent inside them.</li>
+                <li><b>Aerobic</b>: “with oxygen”. In coffee processing it means fermentation in an open tank, with air free to circulate; it is the baseline fermentation inside the classic washed process, and the contrast case for anaerobic (sealed-tank) fermentation. Temperature sets its clock, and its main acids are acetic, citric and malic (Chapter 1).</li>
                 <li><b>Agitation</b>: any deliberate disturbance of the brew: swirling, stirring, excavating the bloom, pulsed pouring. Physically, it replaces the saturated boundary layer at each particle with fresher water and restarts diffusion's gradient (Chapter 2).</li>
                 <li><b>Airlock</b>: a small water-filled valve in the lid of a fermentation tank. Gas made inside bubbles out through the water; air cannot come back in the same way. It is the pressure relief that lets a sealed tank survive its own fermentation (Chapter 1).</li>
                 <li><b>Alkalinity</b>: the water's acid-neutralising (buffering) capacity, mostly bicarbonate. Sets how much of coffee's acidity survives into the cup.</li>
@@ -3919,7 +4100,9 @@
                 <li><b>Crema</b>: espresso's foam: CO<sub>2</sub> microbubbles stabilised by emulsified coffee oils, possible only under pressure.</li>
                 <li><b>Cupping</b>: the standardised immersion tasting protocol of Chapter 21: fixed ratio, no flow, crust broken at four minutes, tasted as it cools. Built to measure the coffee, not the brewing.</li>
                 <li id="gloss-d"><b>Darcy's law</b>: flow through a porous medium: Q = kA·ΔP/(μL). Governs drippers and pucks alike.</li>
+                <li><b>Demucilager</b>: a machine that removes the mucilage layer from depulped coffee by friction, instead of fermenting it loose and washing it off. A DESLIM mechanical demucilager cuts washed processing’s water use from about 40 litres per kilogram of dry parchment to under 1 litre per kilogram (Chapter 1).</li>
                 <li><b>Denaturation</b>: the irreversible unfolding of a protein under heat. In milk, whey proteins denaturing above ~70 °C (158 °F) lose their ability to stabilise foam, the physical reason overheated milk won't pour art.</li>
+                <li><b>Depulping</b>: squeezing the seeds out of the coffee cherry with a machine (a depulper), removing skin and pulp. It is the first step of the washed, honey and aerobic methods; washed coffee is depulped within 24 hours of harvest (Chapter 1).</li>
                 <li><b>Dial-in</b>: the iterative process of adjusting grind, dose, ratio and time until a shot or brew lands in its target window. In this guide's terms: manufacturing a permeability, then verifying it with two numbers (Chapters 3 and 9).</li>
                 <li><b>Diffusion</b>: molecular random walk down a concentration gradient; the only way out of a coffee particle. Time scales with the square of particle size.</li>
                 <li><b>Dose</b>: the mass of dry coffee a brew starts with, in grams (ounces). One of the calculator's four inputs, and the denominator of extraction yield (Chapter 3).</li>
@@ -3947,14 +4130,17 @@
                 <li><b>Micelle</b>: a cluster that surfactant molecules form in water, water-loving ends out. Coffee's surface-active compounds and milk proteins organise at interfaces in related ways, the molecular housekeeping behind stable emulsions and foams (Chapters 11 and 12).</li>
                 <li><b>Microfoam</b>: steamed milk whose air is dispersed as uniform bubbles of ~10–30 µm (0.0004–0.0012 in), coated in milk protein. It pours like wet paint and rafts on espresso as the white of latte art.</li>
                 <li><b>Mineralization</b>: the dissolved mineral content of water, and the act of setting it: hardness ions (Ca²⁺, Mg²⁺) plus the bicarbonate buffer, each with its own target. Not a single number, TDS reads their sum and cannot tell them apart (Chapter 7).</li>
+                <li><b>Mucilage</b>: the sticky, sugary gel layer between a coffee cherry’s pulp and the parchment around the seed. Washed processing ferments it loose and rinses it away; honey processing leaves some or all of it on the parchment to dry (Chapter 1).</li>
                 <li><b>Mode</b>: the most common value in a distribution: the peak of the PSD curve. Not the same as the median or the mean when the distribution is lopsided (Chapter 4).</li>
                 <li id="gloss-o"><b>Ostwald ripening</b>: the coarsening of a foam as gas diffuses from small, high-pressure bubbles into large, low-pressure ones. The clock that starts the moment steaming stops.</li>
-                <li id="gloss-p"><b>Peer-reviewed</b>: research checked by independent experts before publication, with named authors, a journal and a stated method. The highest grade on the evidence ladder.</li>
+                <li id="gloss-p"><b>Parchment</b>: the papery shell that encloses a coffee seed after depulping, named for its texture when dry. Coffee is dried, rested and traded “in parchment” with this shell on; hulling removes it just before export (Chapter 1).</li>
+                <li><b>Peer-reviewed</b>: research checked by independent experts before publication, with named authors, a journal and a stated method. The highest grade on the evidence ladder.</li>
                 <li><b>Percolation</b>: brewing by passing water <em>through</em> a bed of grounds (pour over, drip), as opposed to immersion, where the grounds steep in the water (French press). The subject of Part 3.</li>
                 <li><b>Permeability (k)</b>: how easily a porous bed lets fluid through; set by pore size, and the true variable behind grind and tamp.</li>
                 <li><b>Portafilter</b>: the handled holder that locks into an espresso machine's group head, carrying the basket and the puck. A bottomless (naked) portafilter exposes the basket's underside so channels can be seen as they form (Chapter 10).</li>
                 <li><b>Pre-infusion</b>: gentle wetting of the espresso puck at low pressure before full 9 bar (131 psi), to swell, seal and degas it.</li>
                 <li><b>Puck</b>: the compressed bed of ground coffee inside the espresso basket: a manufactured porous medium whose permeability the barista sets with grind, dose, distribution and tamp (Chapter 9).</li>
+                <li><b>Pulped natural</b>: the original name, from Brazil in the 1990s, for what is now usually called the honey process: the cherry is pulped, and the mucilage-coated parchment dries without a fermentation tank or a wash (Chapter 1).</li>
                 <li><b>Péclet number</b>: the ratio of advective to diffusive transport. High in the bed's channels, ~zero inside a particle.</li>
                 <li id="gloss-q"><b>Quinic acid</b>: a bitter-leaning acid formed as chlorogenic acids break down in roasting and further during brewing and holding; part of why dark roasts and stale brews turn harsh (Chapters 1 and 21).</li>
                 <li id="gloss-r"><b>Refractometer</b>: the instrument that reads TDS: it measures how much a liquid bends light (its refractive index), which rises with dissolved solids. Samples must be cooled and filtered to read honestly (Chapter 3).</li>
@@ -4004,7 +4190,7 @@
                   <li><b>Water is treated as ≈ 1 g = 1 mL.</b> True near room temperature; at 93 °C (199 °F) water's density is ≈ 0.96 g/mL, a ~4% effect the guide ignores in ratio arithmetic, as does standard coffee practice.</li>
                   <li><b>Conversions are rounded.</b> Imperial figures are given to two or three significant figures (1 oz = 28.35 g, 1 fl oz of water ≈ 29.6 g, °F = °C × 9/5 + 32). Rounding never changes a conclusion in the guide; where it might, the metric value governs.</li>
                   <li><b>Taste language is population language.</b> “Trends sour”, “reads as bitter” describe what panels and most tasters report on average. Individual palates differ, Chapter 15's four preference clusters are the standing reminder.</li>
-                  <li><b>Anaerobic oxygen levels are inferred, not measured (Ch. 1).</b> Chapter 1's anaerobic section describes sealed tanks as low in oxygen based on how the vessels are set up: sealed, with the microbes consuming what oxygen starts inside. None of the five SIAF trials consulted for that section, among those that describe their vessels, reports a measured oxygen concentration inside the tank. “Anaerobic” in that section therefore names the set-up and its expected conditions, not a quantity anyone in those trials read off an instrument.</li>
+                  <li><b>Anaerobic oxygen levels are inferred, not measured (Ch. 1).</b> Chapter 1's processing section describes sealed tanks as low in oxygen based on how the vessels are set up: sealed, with the microbes consuming what oxygen starts inside. None of the five SIAF trials consulted for that subsection, among those that describe their vessels, reports a measured oxygen concentration inside the tank. “Anaerobic” there therefore names the set-up and its expected conditions, not a quantity anyone in those trials read off an instrument.</li>
                 </ul>
               </div>
             </details>
@@ -4072,7 +4258,7 @@
           </summary>
           <div class="fold-body">
             <div class="narrow">
-              <p class="body-txt">Numbered sources for the guide's measured and standard claims. The twelve papers of Chapter 19's library appear here as [3]–[14], Frost et al. [14], the evidence base of Chapters 15 and 21, was added to the library in this edition; each DOI is a permanent link to the paper. Frameworks and standards follow, then a short further-reading list keyed to the chapters. Additions in this edition ([15]–[20]) are the 2024–2026 papers woven into Chapters 4, 5 and 9. A further addition, [21]–[25], covers anaerobic processing in Chapter 1. Where a claim in the guide rests on a video, on industry data or on a community experiment rather than a journal, the chapter labels it at the point of use (peer-reviewed, technical education, industry data, or hypothesis) and the further-reading list below carries the links.</p>
+              <p class="body-txt">Numbered sources for the guide's measured and standard claims. The twelve papers of Chapter 19's library appear here as [3]–[14], Frost et al. [14], the evidence base of Chapters 15 and 21, was added to the library in this edition; each DOI is a permanent link to the paper. Frameworks and standards follow, then a short further-reading list keyed to the chapters. Additions in this edition ([15]–[20]) are the 2024–2026 papers woven into Chapters 4, 5 and 9. A further addition, [21]–[25], covers anaerobic processing in Chapter 1, and [26]–[33] cover the washed, natural, honey and aerobic methods in the same processing section. Where a claim in the guide rests on a video, on industry data or on a community experiment rather than a journal, the chapter labels it at the point of use (peer-reviewed, technical education, industry data, or hypothesis) and the further-reading list below carries the links.</p>
               <ol class="steps" style="padding-left:24px">
                 <li style="padding:9px 0">Specialty Coffee Association. <em>Brewing Control Chart</em>. Two versions, kept separate in this guide: the Version 3 chart, revised March 2019 (the “SCA Ideal” box), plots 18–22% extraction at 1.15–1.45% TDS with ratio lines from 1:12 to 1:22; the classic Golden Cup Standard (SCA Coffee Standards 2018, section 5.1) keeps the same 18–22% extraction with a narrower 1.15–1.35% TDS. The framework of Chapter 3. The chart descends from Ernest Lockhart's 1957 Coffee Brewing Institute taste-panel work, centred near 55 g/L (±10%, about 1:18). (An organisational standard; standards carry no DOI.)</li>
                 <li style="padding:9px 0">Water quality standards, two different documents, kept separate in this guide. (a) The 2009 SCAA standard: TDS 150 mg/L (≈150 ppm), acceptable range 75–250; calcium hardness 68 mg/L (range 17–85); alkalinity 40 mg/L, specified as “at or near 40”; pH 7.0 (range 6.5–7.5); sodium target 10 mg/L (acceptable under 30 mg/L). (b) SCA Standard 310-2021, matching the SCAE Water Chart: total hardness 50–175 ppm as CaCO<sub>3</sub>, alkalinity 40–70 ppm, pH 6–8, and no TDS target. The specifications behind Chapter 7. (Organisational standards; standards carry no DOI.)</li>
@@ -4099,6 +4285,14 @@
                 <li style="padding:9px 0">da Mota, M. C. S. et al. (2022). Self-induced anaerobic fermentation (SIAF) and its impact on coffee quality. <em>Food Bioscience</em> 47, 101640, Chapter 1's anaerobic section: all SIAF coffees scored 84 points or more, the highest 87.50 from whole cherries fermented without water for 96 hours, and dried natural coffee held 13.20 g/kg lactic acid after 180 hours of SIAF without yeast inoculation.</li>
                 <li style="padding:9px 0">Bressani, A. P. P. et al. (2024). Arabica coffee fermentation. <em>Foods</em> 13, 454, Chapter 1's anaerobic section: pH and lactic acid tracked through fermentation, lactic acid reaching 52.20 mg/g in natural and 25.05 mg/g in pulped coffee at 72 hours.</li>
                 <li style="padding:9px 0">Coffearium. <em>Anaerobic fermentation</em>. A source-checked reference entry, updated 24 October 2026, <a href="https://www.coffearium.org/entries/anaerobic-fermentation/">coffearium.org/entries/anaerobic-fermentation</a>, further reading for Chapter 1's anaerobic section and the source for its trial-by-trial numbers (the ZHAW carbonic maceration comparison, the Peru scores, the Yunnan study and the 2025 meta-analysis of 22 studies).</li>
+                <li style="padding:9px 0">Coffearium. <em>Washed process</em>. Reference entry on washed (wet) processing, Chapter 1's processing section: depulping within 24 hours of harvest, fermentation and washing, the optional soak, Kenya double fermentation, and drying to 10 to 12 percent moisture.</li>
+                <li style="padding:9px 0">Coffearium. <em>Honey process</em>. Reference entry on honey (pulped natural) processing, Chapter 1's processing section: mucilage left on the parchment, no fermentation tank and no wash, and the colour grades as producer conventions.</li>
+                <li style="padding:9px 0">Codex Alimentarius Commission. <em>Code of practice</em> for coffee, the source of the washed-fermentation range used in Chapter 1: 12 to 36 hours.</li>
+                <li style="padding:9px 0">Elhalis, H. et al. (2023). Review of coffee fermentation and processing (the 2023 review cited in Chapter 1): washed fermentation of 6 to 72 hours depending on climate, honey drying of 12 to 30 days with 20 to 80 percent of the pulp material left on the seed across the colour grades, and natural drying times.</li>
+                <li style="padding:9px 0">Poltronieri, P. &amp; Rossi, F. (2016). Challenges in specialty coffee processing and quality assurance. <em>Challenges</em> 7(2), 19 (the 2016 review cited in Chapter 1): washed fermentation of 12 to 48 hours, and honey grades of about 25 percent of the mucilage kept (yellow), about 50 percent (red) and usually fully covered (black), drying in about 8, 12 and 30 days.</li>
+                <li style="padding:9px 0">Cafe Imports. <em>Processing 101</em>. Importer's guide to the washed, natural and honey methods, Chapter 1's processing section: the step order of each method and what stays on the seed while it dries.</li>
+                <li style="padding:9px 0">Particular Coffee. <em>Fermentation science</em>. Guide to coffee fermentation, Chapter 1's processing section: the microbial sequence in a washed ferment (yeasts first, then lactic acid bacteria, then acetic acid bacteria) and pH falling from about 6.0 to 6.5 to about 4.0.</li>
+                <li style="padding:9px 0">Expert Cafe. <em>Fermentation guide</em>. Guide to aerobic coffee fermentation, Chapter 1's processing section: open-tank runs of 12 to 36 hours, temperature setting the clock (24 to 36 hours at 20 °C, about 12 hours at 30 °C, 48 to 72 hours at 10 to 15 °C), a clean-ferment pH target of 3.8 to 4.5, and vinegary over-fermentation below pH 3.5.</li>
               </ol>
               <h3 style="margin-top:34px">Further reading, by chapter</h3>
               <ul class="clean">
@@ -4838,7 +5032,8 @@
         {sel: 'svg[aria-label^="Flow diagram: grind size"]', kind: 'svg', t: 'From variables to the cup', ch: 'Chapter 20 · Models & method', s: 'method', d: 'Grind size, temperature, water chemistry, time and ratio flow into extraction (flow plus diffusion) which produces the cup, measured as TDS, extraction yield and flavour. Takeaway: the whole guide is this diagram; the method chapter teaches you to test any arrow in it.'},
         {sel: 'svg[aria-label^="Flow diagram: aroma reaches"]', kind: 'svg', t: 'Two routes to flavour', ch: 'Chapter 21 · The senses', s: 'senses', d: 'Aroma reaches the nose directly by sniffing (orthonasal) and from the mouth, up behind the palate, while swallowing (retronasal); together with taste and texture, the brain reads them as flavour. Takeaway: most of what we call taste is smell, arriving by the back door.'},
         {sel: 'svg[aria-label^="Simplified coffee flavour wheel"]', kind: 'svg', t: 'The flavour wheel, simplified', ch: 'Chapter 21 · The senses', s: 'senses', f: 'The flavour wheel', d: 'Nine flavour families on a wheel, simplified from the SCA / World Coffee Research vocabulary of over a hundred descriptors. Takeaway: start at the family, then narrow to the note, a shared word is a claim another taster can check.'},
-        {sel: 'svg[aria-label^="Sealed tank over time"]', kind: 'svg', t: 'The sealed tank over time, and the three set-ups', ch: 'Chapter 1 · The bean', s: 'bean', f: 'The sealed tank over time', d: 'Inside an anaerobic tank across 192 hours: oxygen falls as the microbes use it, CO₂ rises to take over the gas, and pH falls (5.8 to 4.4 in the first 72 hours in one Brazilian tank). Below, the three sealed set-ups (SIAF tank with airlock, vacuum bag, CO₂-injected bag) beside the open tank. Takeaway: sealing the tank chooses which microbes, and therefore which acids, do the fermenting. Schematic curves, anchored to trial values.'}
+        {sel: 'svg[aria-label^="Sealed tank over time"]', kind: 'svg', t: 'The sealed tank over time, and the three set-ups', ch: 'Chapter 1 · The bean', s: 'bean', f: 'Anaerobic: the physics and chemistry', d: 'Inside an anaerobic tank across 192 hours: oxygen falls as the microbes use it, CO₂ rises to take over the gas, and pH falls (5.8 to 4.4 in the first 72 hours in one Brazilian tank). Below, the three sealed set-ups (SIAF tank with airlock, vacuum bag, CO₂-injected bag) beside the open tank. Takeaway: sealing the tank chooses which microbes, and therefore which acids, do the fermenting. Schematic curves, anchored to trial values.'},
+        {sel: 'svg[aria-label^="Five ways from cherry"]', kind: 'svg', t: 'Five ways from cherry to green bean', ch: 'Chapter 1 · The bean', s: 'bean', f: 'Five ways from cherry', d: 'The five processing methods side by side: washed, natural, honey, aerobic and anaerobic, compared on what stays on the seed, whether air can reach it, and how long the defining step takes. Takeaway: three methods are defined by what dries on the seed and two by the air around a fermentation, and every method ends at the same green bean, at about 10–12% moisture.'}
       ];
       var TABLES = [
         {sel: '#latteart .cmp-table', kind: 'table', t: 'Espresso vs. filter, side by side', ch: 'Chapter 12 · Milk & latte art', s: 'latteart', f: 'Espresso vs. filter', d: 'The two methods compared row by row: driving force, grind, bed geometry, ratio and strength, contact time, temperature and failure modes. Takeaway: same physics, different decades, of pressure, of strength, and of time.'},
@@ -4846,7 +5041,7 @@
         {sel: '#cheatsheet .cmp-table', nth: 0, kind: 'table', t: 'The windows, filter vs. espresso', ch: 'Cheat Sheet', s: 'cheatsheet', f: 'The windows', d: 'The target windows for both methods on one card: dose, ratio, grind, time, temperature, strength and extraction. Takeaway: if a number here surprises you, the chapter behind it is one search away.'},
         {sel: '#cheatsheet .cmp-table', nth: 1, kind: 'table', t: 'Read your two numbers', ch: 'Cheat Sheet', s: 'cheatsheet', f: 'Read your two numbers', d: 'A ten-second diagnosis: find your TDS and extraction yield, read what the pair means, and make the one move it names. Takeaway: diagnose the axis you are off before touching any variable.'},
         {sel: '.trend-table', kind: 'table', t: 'Change one thing, watch what moves', ch: 'Cheat Sheet', s: 'cheatsheet', f: 'Change one thing', d: 'For each single change, grind finer or coarser, hotter or cooler, longer or shorter, tighter or looser ratio, what it does to flow and time, extraction and strength. Takeaway: predict the direction of a change before you make it, then check with a brew.'},
-        {sel: '#bean .cmp-table', kind: 'table', t: 'Four processes, side by side', ch: 'Chapter 1 · The bean', s: 'bean', f: 'Four processes, side by side', d: 'Washed, natural, honey and anaerobic compared: what stays on the bean, oxygen exposure, typical time (washed fermentation 12–36 hours by the Codex code of practice; anaerobic runs 24–192 hours in the trials), main acids and microbes, and typical cup character, every number labelled with its source. Takeaway: the ranges overlap and method alone does not fix flavour; an anaerobic coffee is usually also a natural or a washed coffee underneath.'}
+        {sel: '#bean .cmp-table', kind: 'table', t: 'Five processes, side by side', ch: 'Chapter 1 · The bean', s: 'bean', f: 'Five processes, side by side', d: 'Washed, natural, honey, aerobic and anaerobic compared on the same rows: what stays on the bean while it dries or ferments, oxygen, typical time, drying time, water use where known, and typical cup character. Takeaway: the ranges overlap and method alone does not fix flavour; an anaerobic coffee is usually also a natural or a washed coffee underneath, and a washed coffee’s tank fermentation is the aerobic row.'}
       ];
       var figBuilt = false;
       function resolveFig(e){
@@ -5013,7 +5208,8 @@
       /* ---- Site search: finds a chapter or tool and opens it ---- */
       var INDEX = [
         {t: "Chapter 1 · The bean", s: "bean", k: "roast roasting maillard caramelisation first crack origin variety processing light dark roast solubility"},
-        {t: "Anaerobic processing, fermentation in a sealed tank", s: "bean", f: "Anaerobic processing", k: "anaerobic fermentation siaf self-induced carbonic maceration sealed tank lactic acid bacteria airlock brix vacuum co2 processing washed natural honey"},
+        {t: "Processing: how the cherry becomes a green bean", s: "bean", f: "Five ways from cherry", k: "processing washed natural honey aerobic anaerobic mucilage parchment depulping pulped natural demucilager deslim codex honey grades aerobic fermentation baseline cherry green bean"},
+        {t: "Anaerobic processing, fermentation in a sealed tank", s: "bean", f: "Anaerobic: what happens", k: "anaerobic fermentation siaf self-induced carbonic maceration sealed tank lactic acid bacteria airlock brix vacuum co2 processing washed natural honey"},
         {t: "Chapter 2 · Diffusion & the particle", s: "diffusion", k: "diffusion tau d2 fick peclet agitation boundary layer particle time"},
         {t: "Chapter 3 · The brewing control chart", s: "chart", k: "tds extraction yield control chart strength refractometer measure"},
         {t: "Calculator, find your brew", s: "chart", f: "Find your brew", k: "calculator dose ratio tds extraction yield espresso mode filter mode"},
