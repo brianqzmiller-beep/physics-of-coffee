@@ -5769,7 +5769,7 @@
         /* ---- 8. Degassing ---- */
         function degas(t){ return 100 * (0.72 * Math.exp(-t / 6) + 0.28 * Math.exp(-t / 40)); }
         chart(host("chart-degas"), { aria: "Modelled chart: carbon dioxide remaining in whole beans over the weeks after roasting, a fast pool and a slow pool.",
-          w: 720, h: 400, ml: 56, mr: 118, mt: 16, mb: 52,
+          w: 720, h: 400, ml: 56, mr: 150, mt: 16, mb: 52,
           x: [0, 30], y: [0, 105], xticks: [0, 7, 14, 21, 30], yticks: [0, 25, 50, 75, 100],
           xlabel: "Days since roasting", ylabel: "CO₂ remaining (%)",
           series: [{pts: sample(degas, 0, 30, 60), color: ACCENT, fill: true, fillOpacity: 0.12, label: "CO₂ remaining", labelAt: [30, degas(30)], labelDx: 10}],
